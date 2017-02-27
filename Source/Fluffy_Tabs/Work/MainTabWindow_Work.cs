@@ -683,6 +683,443 @@ namespace Fluffy_Tabs
                 if ( Widgets.ButtonImage( ref curPos, Direction.Left, Resources.Priorities_Toggle, "FluffyTabs.PrioritiesIntTip".Translate() ) )
                     NumericMode = true;
             }
+
+            if ( Widgets.ButtonImage(ref curPos, Direction.Left, Resources.Cog, "Reset everything to reasonable defaults") )
+            {
+                /*
+                foreach (WorkGiverDef wgd in DefDatabase<WorkGiverDef>.AllDefsListForReading)
+                {
+                    Log.Message(wgd.verb + "," + wgd.priorityInType);
+                }
+                */
+                //Log.Message("Hello World!");
+                //System.Random rand = new System.Random();
+                foreach (Pawn p in Find.VisibleMap.mapPawns.FreeColonists)
+                {
+                    PawnPrioritiesTracker ppt = WorldObject_Priorities.Get?.WorkgiverTracker(p);
+                    foreach (WorkGiverDef wgd in DefDatabase<WorkGiverDef>.AllDefsListForReading)
+                    {
+                        //Log.Message(wgd.verb + "," + wgd.priorityInType + "," + p.skills.MaxPassionOfRelevantSkillsFor(wgd.workType).ToString());
+                        if (!p.story.WorkTypeIsDisabled(wgd.workType))
+                        {
+                            //ppt.SetPriority(wgd, rand.Next(1, 7));
+                            switch (wgd.verb + "," + wgd.priorityInType)
+                            {
+                                case "extinguish,0":
+                                    ppt.SetPriority(wgd, 2);
+                                    break;
+                                case "receive treatment in,0":
+                                    ppt.SetPriority(wgd, 2);
+                                    break;
+                                case "treat,100":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "rescue,90":
+                                    ppt.SetPriority(wgd, 2);
+                                    break;
+                                case "operate,80":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "treat,70":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "feed,60":
+                                    ppt.SetPriority(wgd, 5);
+                                    break;
+                                case "operate,50":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "take to operate,5":
+                                    ppt.SetPriority(wgd, 2);
+                                    break;
+                                case "visit,3":
+                                    ppt.SetPriority(wgd, 9);
+                                    break;
+                                case "get bed rest in,0":
+                                    ppt.SetPriority(wgd, 2);
+                                    break;
+                                case "flick switch on,500":
+                                    ppt.SetPriority(wgd, 2);
+                                    break;
+                                case "do execution on,110":
+                                    ppt.SetPriority(wgd, 2);
+                                    break;
+                                case "release,100":
+                                    ppt.SetPriority(wgd, 2);
+                                    break;
+                                case "take to bed,90":
+                                    ppt.SetPriority(wgd, 2);
+                                    break;
+                                case "feed,80":
+                                    ppt.SetPriority(wgd, 5);
+                                    break;
+                                case "deliver food for,70":
+                                    ppt.SetPriority(wgd, 5);
+                                    break;
+                                case "chat with,60":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "slaughter,100":
+                                    ppt.SetPriority(wgd, 2);
+                                    break;
+                                case "milk,90":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "shear,85":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "tame,80":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "train,70":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "cook,100":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "cook,97":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "butcher,90":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "fill,50":
+                                    ppt.SetPriority(wgd, 2);
+                                    break;
+                                case "brew,30":
+                                    ppt.SetPriority(wgd, 2);
+                                    break;
+                                case "hunt,0":
+                                    ppt.SetPriority(wgd, 2);
+                                    break;
+                                case "modify,100":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "replace broken components in,90":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "repair,80":
+                                    ppt.SetPriority(wgd, 5);
+                                    break;
+                                case "build roof,70":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "remove roof,60":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "construct,50":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "work on,40":
+                                    ppt.SetPriority(wgd, 3);
+                                    break;
+                                case "work on,30":
+                                    ppt.SetPriority(wgd, 3);
+                                    break;
+                                case "deconstruct,20":
+                                    ppt.SetPriority(wgd, 3);
+                                    break;
+                                case "uninstall,19":
+                                    ppt.SetPriority(wgd, 3);
+                                    break;
+                                case "remove floor,10":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "smooth,5":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "harvest,100":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "sow,50":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "mine,100":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "drill,50":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "cut,0":
+                                    ppt.SetPriority(wgd, 2);
+                                    break;
+                                case "smith,115":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "work,75":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "produce components,50":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "tailor,110":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "sculpt,100":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "craft,100":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "refine chemicals,97":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "produce drugs,95":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "stonecut,90":
+                                    ppt.SetPriority(wgd, 9);
+                                    break;
+                                case "refine,80":
+                                    ppt.SetPriority(wgd, 9);
+                                    break;
+                                case "unload,120":
+                                    ppt.SetPriority(wgd, 6);
+                                    break;
+                                case "load,110":
+                                    ppt.SetPriority(wgd, 6);
+                                    break;
+                                case "strip,100":
+                                    ppt.SetPriority(wgd, 6);
+                                    break;
+                                case "bury,90":
+                                    ppt.SetPriority(wgd, 6);
+                                    break;
+                                case "haul,80":
+                                    ppt.SetPriority(wgd, 3);
+                                    break;
+                                case "open,70":
+                                    ppt.SetPriority(wgd, 6);
+                                    break;
+                                case "refuel,60":
+                                    ppt.SetPriority(wgd, 5);
+                                    break;
+                                case "rearm,50":
+                                    ppt.SetPriority(wgd, 5);
+                                    break;
+                                case "cremate,40":
+                                    ppt.SetPriority(wgd, 5);
+                                    break;
+                                case "work at,30":
+                                    ppt.SetPriority(wgd, 5);
+                                    break;
+                                case "take beer,20":
+                                    ppt.SetPriority(wgd, 6);
+                                    break;
+                                case "fill,19":
+                                    ppt.SetPriority(wgd, 6);
+                                    break;
+                                case "haul,10":
+                                    ppt.SetPriority(wgd, 8);
+                                    break;
+                                case "clear snow,10":
+                                    ppt.SetPriority(wgd, 8);
+                                    break;
+                                case "clean,5":
+                                    ppt.SetPriority(wgd, 8);
+                                    break;
+                                case "research,0":
+                                    ppt.SetPriority(wgd, 0);
+                                    break;
+                                case "manage,100":
+                                    ppt.SetPriority(wgd, 3);
+                                    break;
+                                default:
+                                    break;
+                            }
+                            if ( (int) p.skills.MaxPassionOfRelevantSkillsFor(wgd.workType) > 0 )
+                            {
+                                switch (wgd.verb + "," + wgd.priorityInType)
+                                {
+                                    case "extinguish,0":
+                                        break;
+                                    case "receive treatment in,0":
+                                        break;
+                                    case "treat,100":
+                                        ppt.SetPriority(wgd, 1);
+                                        break;
+                                    case "rescue,90":
+                                        break;
+                                    case "operate,80":
+                                        ppt.SetPriority(wgd, 4);
+                                        break;
+                                    case "treat,70":
+                                        ppt.SetPriority(wgd, 1);
+                                        break;
+                                    case "feed,60":
+                                        break;
+                                    case "operate,50":
+                                        ppt.SetPriority(wgd, 4);
+                                        break;
+                                    case "take to operate,5":
+                                        break;
+                                    case "visit,3":
+                                        break;
+                                    case "get bed rest in,0":
+                                        break;
+                                    case "flick switch on,500":
+                                        break;
+                                    case "do execution on,110":
+                                        break;
+                                    case "release,100":
+                                        break;
+                                    case "take to bed,90":
+                                        break;
+                                    case "feed,80":
+                                        break;
+                                    case "deliver food for,70":
+                                        break;
+                                    case "chat with,60":
+                                        ppt.SetPriority(wgd, 7);
+                                        break;
+                                    case "slaughter,100":
+                                        break;
+                                    case "milk,90":
+                                        ppt.SetPriority(wgd, 4);
+                                        break;
+                                    case "shear,85":
+                                        ppt.SetPriority(wgd, 4);
+                                        break;
+                                    case "tame,80":
+                                        ppt.SetPriority(wgd, 7);
+                                        break;
+                                    case "train,70":
+                                        ppt.SetPriority(wgd, 7);
+                                        break;
+                                    case "cook,100":
+                                        ppt.SetPriority(wgd, 2);
+                                        break;
+                                    case "cook,97":
+                                        ppt.SetPriority(wgd, 2);
+                                        break;
+                                    case "butcher,90":
+                                        ppt.SetPriority(wgd, 2);
+                                        break;
+                                    case "fill,50":
+                                        break;
+                                    case "brew,30":
+                                        break;
+                                    case "hunt,0":
+                                        break;
+                                    case "modify,100":
+                                        ppt.SetPriority(wgd, 7);
+                                        break;
+                                    case "replace broken components in,90":
+                                        ppt.SetPriority(wgd, 2);
+                                        break;
+                                    case "repair,80":
+                                        break;
+                                    case "build roof,70":
+                                        ppt.SetPriority(wgd, 2);
+                                        break;
+                                    case "remove roof,60":
+                                        ppt.SetPriority(wgd, 2);
+                                        break;
+                                    case "construct,50":
+                                        ppt.SetPriority(wgd, 2);
+                                        break;
+                                    case "work on,40":
+                                        break;
+                                    case "work on,30":
+                                        break;
+                                    case "deconstruct,20":
+                                        break;
+                                    case "uninstall,19":
+                                        break;
+                                    case "remove floor,10":
+                                        ppt.SetPriority(wgd, 7);
+                                        break;
+                                    case "smooth,5":
+                                        ppt.SetPriority(wgd, 7);
+                                        break;
+                                    case "harvest,100":
+                                        ppt.SetPriority(wgd, 4);
+                                        break;
+                                    case "sow,50":
+                                        ppt.SetPriority(wgd, 4);
+                                        break;
+                                    case "mine,100":
+                                        ppt.SetPriority(wgd, 4);
+                                        break;
+                                    case "drill,50":
+                                        ppt.SetPriority(wgd, 4);
+                                        break;
+                                    case "cut,0":
+                                        break;
+                                    case "smith,115":
+                                        ppt.SetPriority(wgd, 7);
+                                        break;
+                                    case "work,75":
+                                        ppt.SetPriority(wgd, 7);
+                                        break;
+                                    case "produce components,50":
+                                        ppt.SetPriority(wgd, 7);
+                                        break;
+                                    case "tailor,110":
+                                        ppt.SetPriority(wgd, 7);
+                                        break;
+                                    case "sculpt,100":
+                                        ppt.SetPriority(wgd, 7);
+                                        break;
+                                    case "craft,100":
+                                        ppt.SetPriority(wgd, 7);
+                                        break;
+                                    case "refine chemicals,97":
+                                        ppt.SetPriority(wgd, 7);
+                                        break;
+                                    case "produce drugs,95":
+                                        ppt.SetPriority(wgd, 7);
+                                        break;
+                                    case "stonecut,90":
+                                        ppt.SetPriority(wgd, 7);
+                                        break;
+                                    case "refine,80":
+                                        ppt.SetPriority(wgd, 7);
+                                        break;
+                                    case "unload,120":
+                                        break;
+                                    case "load,110":
+                                        break;
+                                    case "strip,100":
+                                        break;
+                                    case "bury,90":
+                                        break;
+                                    case "haul,80":
+                                        break;
+                                    case "open,70":
+                                        break;
+                                    case "refuel,60":
+                                        break;
+                                    case "rearm,50":
+                                        break;
+                                    case "cremate,40":
+                                        break;
+                                    case "work at,30":
+                                        break;
+                                    case "take beer,20":
+                                        break;
+                                    case "fill,19":
+                                        break;
+                                    case "haul,10":
+                                        break;
+                                    case "clear snow,10":
+                                        break;
+                                    case "clean,5":
+                                        break;
+                                    case "research,0":
+                                        ppt.SetPriority(wgd, 7);
+                                        break;
+                                    case "manage,100":
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            }
+                        }
+                    }
+                        
+                }
+            }
         }
 
         private void DrawWorkHeader( WorkTypeDef worktype, Vector2 offset, float width, float height, int i )
