@@ -970,7 +970,7 @@ namespace Fluffy_Tabs
                                     case "deliver food for,70":
                                         break;
                                     case "chat with,60":
-                                        ppt.SetPriority(wgd, 7);
+                                        ppt.SetPriority(wgd, 4);
                                         break;
                                     case "slaughter,100":
                                         break;
