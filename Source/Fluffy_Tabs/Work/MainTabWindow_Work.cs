@@ -784,13 +784,13 @@ namespace Fluffy_Tabs
                                     ppt.SetPriority(wgd, 0);
                                     break;
                                 case "fill,50":
-                                    ppt.SetPriority(wgd, 2);
+                                    ppt.SetPriority(wgd, 6);
                                     break;
                                 case "brew,30":
-                                    ppt.SetPriority(wgd, 2);
+                                    ppt.SetPriority(wgd, 6);
                                     break;
                                 case "hunt,0":
-                                    ppt.SetPriority(wgd, 2);
+                                    ppt.SetPriority(wgd, 6);
                                     break;
                                 case "modify,100":
                                     ppt.SetPriority(wgd, 0);
@@ -835,13 +835,13 @@ namespace Fluffy_Tabs
                                     ppt.SetPriority(wgd, 0);
                                     break;
                                 case "mine,100":
-                                    ppt.SetPriority(wgd, 0);
+                                    ppt.SetPriority(wgd, 9);
                                     break;
                                 case "drill,50":
-                                    ppt.SetPriority(wgd, 0);
+                                    ppt.SetPriority(wgd, 9);
                                     break;
                                 case "cut,0":
-                                    ppt.SetPriority(wgd, 2);
+                                    ppt.SetPriority(wgd, 6);
                                     break;
                                 case "smith,115":
                                     ppt.SetPriority(wgd, 0);
@@ -1033,16 +1033,16 @@ namespace Fluffy_Tabs
                                         ppt.SetPriority(wgd, 7);
                                         break;
                                     case "harvest,100":
-                                        ppt.SetPriority(wgd, 4);
+                                        ppt.SetPriority(wgd, 7);
                                         break;
                                     case "sow,50":
-                                        ppt.SetPriority(wgd, 4);
+                                        ppt.SetPriority(wgd, 7);
                                         break;
                                     case "mine,100":
-                                        ppt.SetPriority(wgd, 4);
+                                        ppt.SetPriority(wgd, 7);
                                         break;
                                     case "drill,50":
-                                        ppt.SetPriority(wgd, 4);
+                                        ppt.SetPriority(wgd, 7);
                                         break;
                                     case "cut,0":
                                         break;
