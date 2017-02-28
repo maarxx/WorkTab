@@ -941,7 +941,7 @@ namespace Fluffy_Tabs
                                     case "rescue,90":
                                         break;
                                     case "operate,80":
-                                        ppt.SetPriority(wgd, 3);
+                                        ppt.SetPriority(wgd, 2);
                                         break;
                                     case "treat,70":
                                         ppt.SetPriority(wgd, 1);
@@ -949,7 +949,7 @@ namespace Fluffy_Tabs
                                     case "feed,60":
                                         break;
                                     case "operate,50":
-                                        ppt.SetPriority(wgd, 3);
+                                        ppt.SetPriority(wgd, 2);
                                         break;
                                     case "take to operate,5":
                                         break;
