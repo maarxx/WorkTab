@@ -811,16 +811,16 @@ namespace Fluffy_Tabs
                                     ppt.SetPriority(wgd, 0);
                                     break;
                                 case "work on,40":
-                                    ppt.SetPriority(wgd, 2);
+                                    ppt.SetPriority(wgd, 5);
                                     break;
                                 case "work on,30":
-                                    ppt.SetPriority(wgd, 2);
+                                    ppt.SetPriority(wgd, 5);
                                     break;
                                 case "deconstruct,20":
-                                    ppt.SetPriority(wgd, 2);
+                                    ppt.SetPriority(wgd, 5);
                                     break;
                                 case "uninstall,19":
-                                    ppt.SetPriority(wgd, 2);
+                                    ppt.SetPriority(wgd, 5);
                                     break;
                                 case "remove floor,10":
                                     ppt.SetPriority(wgd, 0);
