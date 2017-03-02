@@ -784,13 +784,13 @@ namespace Fluffy_Tabs
                                     ppt.SetPriority(wgd, 0);
                                     break;
                                 case "fill,50":
-                                    ppt.SetPriority(wgd, 6);
+                                    ppt.SetPriority(wgd, 5);
                                     break;
                                 case "brew,30":
-                                    ppt.SetPriority(wgd, 6);
+                                    ppt.SetPriority(wgd, 5);
                                     break;
                                 case "hunt,0":
-                                    ppt.SetPriority(wgd, 7);
+                                    ppt.SetPriority(wgd, 8);
                                     break;
                                 case "modify,100":
                                     ppt.SetPriority(wgd, 0);
@@ -799,7 +799,7 @@ namespace Fluffy_Tabs
                                     ppt.SetPriority(wgd, 0);
                                     break;
                                 case "repair,80":
-                                    ppt.SetPriority(wgd, 5);
+                                    ppt.SetPriority(wgd, 2);
                                     break;
                                 case "build roof,70":
                                     ppt.SetPriority(wgd, 0);
@@ -874,22 +874,22 @@ namespace Fluffy_Tabs
                                     ppt.SetPriority(wgd, 9);
                                     break;
                                 case "unload,120":
-                                    ppt.SetPriority(wgd, 6);
+                                    ppt.SetPriority(wgd, 5);
                                     break;
                                 case "load,110":
-                                    ppt.SetPriority(wgd, 6);
+                                    ppt.SetPriority(wgd, 5);
                                     break;
                                 case "strip,100":
-                                    ppt.SetPriority(wgd, 6);
+                                    ppt.SetPriority(wgd, 5);
                                     break;
                                 case "bury,90":
-                                    ppt.SetPriority(wgd, 6);
+                                    ppt.SetPriority(wgd, 5);
                                     break;
                                 case "haul,80":
                                     ppt.SetPriority(wgd, 2);
                                     break;
                                 case "open,70":
-                                    ppt.SetPriority(wgd, 6);
+                                    ppt.SetPriority(wgd, 5);
                                     break;
                                 case "refuel,60":
                                     ppt.SetPriority(wgd, 5);
@@ -904,19 +904,19 @@ namespace Fluffy_Tabs
                                     ppt.SetPriority(wgd, 5);
                                     break;
                                 case "take beer,20":
-                                    ppt.SetPriority(wgd, 6);
+                                    ppt.SetPriority(wgd, 5);
                                     break;
                                 case "fill,19":
-                                    ppt.SetPriority(wgd, 6);
+                                    ppt.SetPriority(wgd, 5);
                                     break;
                                 case "haul,10":
-                                    ppt.SetPriority(wgd, 9);
+                                    ppt.SetPriority(wgd, 8);
                                     break;
                                 case "clear snow,10":
-                                    ppt.SetPriority(wgd, 9);
+                                    ppt.SetPriority(wgd, 8);
                                     break;
                                 case "clean,5":
-                                    ppt.SetPriority(wgd, 9);
+                                    ppt.SetPriority(wgd, 8);
                                     break;
                                 case "research,0":
                                     ppt.SetPriority(wgd, 0);
@@ -941,7 +941,7 @@ namespace Fluffy_Tabs
                                     case "rescue,90":
                                         break;
                                     case "operate,80":
-                                        ppt.SetPriority(wgd, 4);
+                                        ppt.SetPriority(wgd, 2);
                                         break;
                                     case "treat,70":
                                         ppt.SetPriority(wgd, 1);
@@ -949,7 +949,7 @@ namespace Fluffy_Tabs
                                     case "feed,60":
                                         break;
                                     case "operate,50":
-                                        ppt.SetPriority(wgd, 4);
+                                        ppt.SetPriority(wgd, 2);
                                         break;
                                     case "take to operate,5":
                                         break;
@@ -981,10 +981,10 @@ namespace Fluffy_Tabs
                                         ppt.SetPriority(wgd, 4);
                                         break;
                                     case "tame,80":
-                                        ppt.SetPriority(wgd, 8);
+                                        ppt.SetPriority(wgd, 6);
                                         break;
                                     case "train,70":
-                                        ppt.SetPriority(wgd, 8);
+                                        ppt.SetPriority(wgd, 6);
                                         break;
                                     case "cook,100":
                                         ppt.SetPriority(wgd, 2);
@@ -1002,7 +1002,7 @@ namespace Fluffy_Tabs
                                     case "hunt,0":
                                         break;
                                     case "modify,100":
-                                        ppt.SetPriority(wgd, 8);
+                                        ppt.SetPriority(wgd, 4);
                                         break;
                                     case "replace broken components in,90":
                                         ppt.SetPriority(wgd, 2);
@@ -1027,54 +1027,54 @@ namespace Fluffy_Tabs
                                     case "uninstall,19":
                                         break;
                                     case "remove floor,10":
-                                        ppt.SetPriority(wgd, 8);
+                                        ppt.SetPriority(wgd, 5);
                                         break;
                                     case "smooth,5":
-                                        ppt.SetPriority(wgd, 8);
+                                        ppt.SetPriority(wgd, 5);
                                         break;
                                     case "harvest,100":
-                                        ppt.SetPriority(wgd, 8);
+                                        ppt.SetPriority(wgd, 9);
                                         break;
                                     case "sow,50":
-                                        ppt.SetPriority(wgd, 8);
+                                        ppt.SetPriority(wgd, 9);
                                         break;
                                     case "mine,100":
-                                        ppt.SetPriority(wgd, 8);
+                                        ppt.SetPriority(wgd, 9);
                                         break;
                                     case "drill,50":
-                                        ppt.SetPriority(wgd, 8);
+                                        ppt.SetPriority(wgd, 9);
                                         break;
                                     case "cut,0":
                                         break;
                                     case "smith,115":
-                                        ppt.SetPriority(wgd, 8);
+                                        ppt.SetPriority(wgd, 9);
                                         break;
                                     case "work,75":
-                                        ppt.SetPriority(wgd, 8);
+                                        ppt.SetPriority(wgd, 9);
                                         break;
                                     case "produce components,50":
-                                        ppt.SetPriority(wgd, 8);
+                                        ppt.SetPriority(wgd, 9);
                                         break;
                                     case "tailor,110":
-                                        ppt.SetPriority(wgd, 8);
+                                        ppt.SetPriority(wgd, 9);
                                         break;
                                     case "sculpt,100":
-                                        ppt.SetPriority(wgd, 8);
+                                        ppt.SetPriority(wgd, 9);
                                         break;
                                     case "craft,100":
-                                        ppt.SetPriority(wgd, 8);
+                                        ppt.SetPriority(wgd, 9);
                                         break;
                                     case "refine chemicals,97":
-                                        ppt.SetPriority(wgd, 8);
+                                        ppt.SetPriority(wgd, 9);
                                         break;
                                     case "produce drugs,95":
-                                        ppt.SetPriority(wgd, 8);
+                                        ppt.SetPriority(wgd, 9);
                                         break;
                                     case "stonecut,90":
-                                        ppt.SetPriority(wgd, 8);
+                                        ppt.SetPriority(wgd, 9);
                                         break;
                                     case "refine,80":
-                                        ppt.SetPriority(wgd, 8);
+                                        ppt.SetPriority(wgd, 9);
                                         break;
                                     case "unload,120":
                                         break;
@@ -1107,7 +1107,7 @@ namespace Fluffy_Tabs
                                     case "clean,5":
                                         break;
                                     case "research,0":
-                                        ppt.SetPriority(wgd, 8);
+                                        ppt.SetPriority(wgd, 9);
                                         break;
                                     case "manage,100":
                                         break;
