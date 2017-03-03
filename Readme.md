@@ -1,6 +1,14 @@
 [![RimWorld Alpha 16](https://img.shields.io/badge/RimWorld-Alpha 16-brightgreen.svg)](http://rimworldgame.com/)
 
-Provides a vastly more customizable work tab. 
+Provides a vastly more customizable work tab.
+
+# Fork by Maarx
+
+This Fork of the codebase adds another button in the upper-right-hand corner of the Work Tab which resets all Colonist's Work Priorities to sensible defaults using the Detailed / Therapist mode.
+
+This Fork partially written due to current bugs in Origin which cause all Work Priorities to be lost / reset upon Save / Load, and a number of shortcomings with the Favorites / Presets.
+
+Obligatory: I love the mod, I love it a lot, otherwise I wouldn't have bothered to fix it for my own usage. :)
 
 # Important
 **Requires HugsLib**
