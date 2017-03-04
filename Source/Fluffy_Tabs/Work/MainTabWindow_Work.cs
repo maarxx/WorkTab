@@ -1115,6 +1115,251 @@ namespace Fluffy_Tabs
                                         break;
                                 }
                             }
+                            string pawnName = p.NameStringShort;
+                            if (pawnName.Contains("-"))
+                            {
+                                //str.Substring(str.LastIndexOf('-') + 1);
+                                string afterDash = pawnName.Substring(pawnName.LastIndexOf('-') + 1);
+                                switch (wgd.verb + "," + wgd.priorityInType)
+                                {
+                                    case "extinguish,0":
+                                        break;
+                                    case "receive treatment in,0":
+                                        break;
+                                    case "treat,100":
+                                        //ppt.SetPriority(wgd, 1);
+                                        break;
+                                    case "rescue,90":
+                                        break;
+                                    case "operate,80":
+                                        //ppt.SetPriority(wgd, 2);
+                                        break;
+                                    case "treat,70":
+                                        //ppt.SetPriority(wgd, 1);
+                                        break;
+                                    case "feed,60":
+                                        break;
+                                    case "operate,50":
+                                        //ppt.SetPriority(wgd, 2);
+                                        break;
+                                    case "take to operate,5":
+                                        break;
+                                    case "visit,3":
+                                        break;
+                                    case "get bed rest in,0":
+                                        break;
+                                    case "flick switch on,500":
+                                        break;
+                                    case "do execution on,110":
+                                        break;
+                                    case "release,100":
+                                        break;
+                                    case "take to bed,90":
+                                        break;
+                                    case "feed,80":
+                                        break;
+                                    case "deliver food for,70":
+                                        break;
+                                    case "chat with,60":
+                                        //ppt.SetPriority(wgd, 3);
+                                        break;
+                                    case "slaughter,100":
+                                        break;
+                                    case "milk,90":
+                                        //ppt.SetPriority(wgd, 3);
+                                        break;
+                                    case "shear,85":
+                                        //ppt.SetPriority(wgd, 3);
+                                        break;
+                                    case "tame,80":
+                                        //ppt.SetPriority(wgd, 7);
+                                        break;
+                                    case "train,70":
+                                        //ppt.SetPriority(wgd, 7);
+                                        break;
+                                    case "cook,100":
+                                        //ppt.SetPriority(wgd, 2);
+                                        break;
+                                    case "cook,97":
+                                        //ppt.SetPriority(wgd, 2);
+                                        break;
+                                    case "butcher,90":
+                                        //ppt.SetPriority(wgd, 2);
+                                        break;
+                                    case "fill,50":
+                                        break;
+                                    case "brew,30":
+                                        break;
+                                    case "hunt,0":
+                                        break;
+                                    case "modify,100":
+                                        //ppt.SetPriority(wgd, 3);
+                                        break;
+                                    case "replace broken components in,90":
+                                        //ppt.SetPriority(wgd, 2);
+                                        break;
+                                    case "repair,80":
+                                        break;
+                                    case "build roof,70":
+                                        //ppt.SetPriority(wgd, 2);
+                                        break;
+                                    case "remove roof,60":
+                                        //ppt.SetPriority(wgd, 2);
+                                        break;
+                                    case "construct,50":
+                                        //ppt.SetPriority(wgd, 2);
+                                        break;
+                                    case "work on,40":
+                                        break;
+                                    case "work on,30":
+                                        break;
+                                    case "deconstruct,20":
+                                        break;
+                                    case "uninstall,19":
+                                        break;
+                                    case "remove floor,10":
+                                        //ppt.SetPriority(wgd, 4);
+                                        break;
+                                    case "smooth,5":
+                                        //ppt.SetPriority(wgd, 4);
+                                        break;
+                                    case "harvest,100":
+                                        if (afterDash.Contains("G"))
+                                        {
+                                            ppt.SetPriority(wgd, 6);
+                                        }
+                                        break;
+                                    case "sow,50":
+                                        if (afterDash.Contains("G"))
+                                        {
+                                            ppt.SetPriority(wgd, 6);
+                                        }
+                                        break;
+                                    case "mine,100":
+                                        if (afterDash.Contains("M"))
+                                        {
+                                            ppt.SetPriority(wgd, 6);
+                                        }
+                                        break;
+                                    case "drill,50":
+                                        if (afterDash.Contains("M"))
+                                        {
+                                            ppt.SetPriority(wgd, 6);
+                                        }
+                                        break;
+                                    case "cut,0":
+                                        break;
+                                    case "smith,115":
+                                        if (afterDash.Contains("C"))
+                                        {
+                                            ppt.SetPriority(wgd, 6);
+                                        }
+                                        break;
+                                    case "work,75":
+                                        if (afterDash.Contains("C"))
+                                        {
+                                            ppt.SetPriority(wgd, 6);
+                                        }
+                                        break;
+                                    case "produce components,50":
+                                        if (afterDash.Contains("C"))
+                                        {
+                                            ppt.SetPriority(wgd, 6);
+                                        }
+                                        break;
+                                    case "tailor,110":
+                                        if (afterDash.Contains("C"))
+                                        {
+                                            ppt.SetPriority(wgd, 6);
+                                        }
+                                        break;
+                                    case "sculpt,100":
+                                        if (afterDash.Contains("A"))
+                                        {
+                                            ppt.SetPriority(wgd, 6);
+                                        }
+                                        break;
+                                    case "craft,100":
+                                        if (afterDash.Contains("C"))
+                                        {
+                                            ppt.SetPriority(wgd, 6);
+                                        }
+                                        break;
+                                    case "refine chemicals,97":
+                                        if (afterDash.Contains("C"))
+                                        {
+                                            ppt.SetPriority(wgd, 6);
+                                        }
+                                        break;
+                                    case "produce drugs,95":
+                                        if (afterDash.Contains("C"))
+                                        {
+                                            ppt.SetPriority(wgd, 6);
+                                        }
+                                        break;
+                                    case "stonecut,90":
+                                        ppt.SetPriority(wgd, 9);
+                                        break;
+                                    case "refine,80":
+                                        if (afterDash.Contains("C"))
+                                        {
+                                            ppt.SetPriority(wgd, 6);
+                                        }
+                                        break;
+                                    case "unload,120":
+                                        break;
+                                    case "load,110":
+                                        break;
+                                    case "strip,100":
+                                        break;
+                                    case "bury,90":
+                                        break;
+                                    case "haul,80":
+                                        break;
+                                    case "open,70":
+                                        break;
+                                    case "refuel,60":
+                                        break;
+                                    case "rearm,50":
+                                        break;
+                                    case "cremate,40":
+                                        break;
+                                    case "work at,30":
+                                        break;
+                                    case "take beer,20":
+                                        break;
+                                    case "fill,19":
+                                        break;
+                                    case "haul,10":
+                                        if (afterDash.Contains("H"))
+                                        {
+                                            ppt.SetPriority(wgd, 4);
+                                        }
+                                        break;
+                                    case "clear snow,10":
+                                        if (afterDash.Contains("X"))
+                                        {
+                                            ppt.SetPriority(wgd, 4);
+                                        }
+                                        break;
+                                    case "clean,5":
+                                        if (afterDash.Contains("X"))
+                                        {
+                                            ppt.SetPriority(wgd, 4);
+                                        }
+                                        break;
+                                    case "research,0":
+                                        if (afterDash.Contains("R"))
+                                        {
+                                            ppt.SetPriority(wgd, 6);
+                                        }
+                                        break;
+                                    case "manage,100":
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            }
                         }
                     }
                         
