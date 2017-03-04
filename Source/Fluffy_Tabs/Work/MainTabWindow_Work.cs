@@ -1354,11 +1354,11 @@ namespace Fluffy_Tabs
                                         }
                                         break;
                                     case "produce drugs,95":
-                                        if (afterDash.Contains("C"))
+                                        if (afterDash.Contains("D"))
                                         {
                                             ppt.SetPriority(wgd, 5);
                                         }
-                                        else if (afterDash.Contains("c"))
+                                        else if (afterDash.Contains("d"))
                                         {
                                             ppt.SetPriority(wgd, 6);
                                         }
