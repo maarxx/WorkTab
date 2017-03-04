@@ -697,6 +697,13 @@ namespace Fluffy_Tabs
                 foreach (Pawn p in Find.VisibleMap.mapPawns.FreeColonists)
                 {
                     PawnPrioritiesTracker ppt = WorldObject_Priorities.Get?.WorkgiverTracker(p);
+                    string pawnName = p.NameStringShort;
+                    bool hasDash = pawnName.Contains("-");
+                    string afterDash = "";
+                    if (hasDash)
+                    {
+                        afterDash = pawnName.Substring(pawnName.LastIndexOf('-') + 1);
+                    }
                     foreach (WorkGiverDef wgd in DefDatabase<WorkGiverDef>.AllDefsListForReading)
                     {
                         //Log.Message(wgd.verb + "," + wgd.priorityInType + "," + p.skills.MaxPassionOfRelevantSkillsFor(wgd.workType).ToString());
@@ -981,10 +988,10 @@ namespace Fluffy_Tabs
                                         ppt.SetPriority(wgd, 3);
                                         break;
                                     case "tame,80":
-                                        ppt.SetPriority(wgd, 7);
+                                        ppt.SetPriority(wgd, 9);
                                         break;
                                     case "train,70":
-                                        ppt.SetPriority(wgd, 7);
+                                        ppt.SetPriority(wgd, 9);
                                         break;
                                     case "cook,100":
                                         ppt.SetPriority(wgd, 2);
@@ -1115,11 +1122,8 @@ namespace Fluffy_Tabs
                                         break;
                                 }
                             }
-                            string pawnName = p.NameStringShort;
-                            if (pawnName.Contains("-"))
+                            if (hasDash)
                             {
-                                //str.Substring(str.LastIndexOf('-') + 1);
-                                string afterDash = pawnName.Substring(pawnName.LastIndexOf('-') + 1);
                                 switch (wgd.verb + "," + wgd.priorityInType)
                                 {
                                     case "extinguish,0":
@@ -1172,10 +1176,16 @@ namespace Fluffy_Tabs
                                         //ppt.SetPriority(wgd, 3);
                                         break;
                                     case "tame,80":
-                                        //ppt.SetPriority(wgd, 7);
+                                        if (afterDash.Contains("H"))
+                                        {
+                                            ppt.SetPriority(wgd, 6);
+                                        }
                                         break;
                                     case "train,70":
-                                        //ppt.SetPriority(wgd, 7);
+                                        if (afterDash.Contains("H"))
+                                        {
+                                            ppt.SetPriority(wgd, 6);
+                                        }
                                         break;
                                     case "cook,100":
                                         //ppt.SetPriority(wgd, 2);
@@ -1331,19 +1341,19 @@ namespace Fluffy_Tabs
                                     case "fill,19":
                                         break;
                                     case "haul,10":
-                                        if (afterDash.Contains("H"))
+                                        if (afterDash.Contains("X"))
                                         {
                                             ppt.SetPriority(wgd, 4);
                                         }
                                         break;
                                     case "clear snow,10":
-                                        if (afterDash.Contains("X"))
+                                        if (afterDash.Contains("Y"))
                                         {
                                             ppt.SetPriority(wgd, 4);
                                         }
                                         break;
                                     case "clean,5":
-                                        if (afterDash.Contains("X"))
+                                        if (afterDash.Contains("Y"))
                                         {
                                             ppt.SetPriority(wgd, 4);
                                         }
