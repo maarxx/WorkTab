@@ -1178,11 +1178,19 @@ namespace Fluffy_Tabs
                                     case "tame,80":
                                         if (afterDash.Contains("H"))
                                         {
+                                            ppt.SetPriority(wgd, 5);
+                                        }
+                                        else if (afterDash.Contains("h"))
+                                        {
                                             ppt.SetPriority(wgd, 6);
                                         }
                                         break;
                                     case "train,70":
                                         if (afterDash.Contains("H"))
+                                        {
+                                            ppt.SetPriority(wgd, 5);
+                                        }
+                                        else if (afterDash.Contains("h"))
                                         {
                                             ppt.SetPriority(wgd, 6);
                                         }
@@ -1236,11 +1244,19 @@ namespace Fluffy_Tabs
                                     case "harvest,100":
                                         if (afterDash.Contains("G"))
                                         {
+                                            ppt.SetPriority(wgd, 5);
+                                        }
+                                        else if (afterDash.Contains("g"))
+                                        {
                                             ppt.SetPriority(wgd, 6);
                                         }
                                         break;
                                     case "sow,50":
                                         if (afterDash.Contains("G"))
+                                        {
+                                            ppt.SetPriority(wgd, 5);
+                                        }
+                                        else if (afterDash.Contains("g"))
                                         {
                                             ppt.SetPriority(wgd, 6);
                                         }
@@ -1248,11 +1264,19 @@ namespace Fluffy_Tabs
                                     case "mine,100":
                                         if (afterDash.Contains("M"))
                                         {
+                                            ppt.SetPriority(wgd, 5);
+                                        }
+                                        else if (afterDash.Contains("m"))
+                                        {
                                             ppt.SetPriority(wgd, 6);
                                         }
                                         break;
                                     case "drill,50":
                                         if (afterDash.Contains("M"))
+                                        {
+                                            ppt.SetPriority(wgd, 5);
+                                        }
+                                        else if (afterDash.Contains("m"))
                                         {
                                             ppt.SetPriority(wgd, 6);
                                         }
@@ -1262,11 +1286,19 @@ namespace Fluffy_Tabs
                                     case "smith,115":
                                         if (afterDash.Contains("C"))
                                         {
+                                            ppt.SetPriority(wgd, 5);
+                                        }
+                                        else if (afterDash.Contains("c"))
+                                        {
                                             ppt.SetPriority(wgd, 6);
                                         }
                                         break;
                                     case "work,75":
                                         if (afterDash.Contains("C"))
+                                        {
+                                            ppt.SetPriority(wgd, 5);
+                                        }
+                                        else if (afterDash.Contains("c"))
                                         {
                                             ppt.SetPriority(wgd, 6);
                                         }
@@ -1274,11 +1306,19 @@ namespace Fluffy_Tabs
                                     case "produce components,50":
                                         if (afterDash.Contains("C"))
                                         {
+                                            ppt.SetPriority(wgd, 5);
+                                        }
+                                        else if (afterDash.Contains("c"))
+                                        {
                                             ppt.SetPriority(wgd, 6);
                                         }
                                         break;
                                     case "tailor,110":
                                         if (afterDash.Contains("C"))
+                                        {
+                                            ppt.SetPriority(wgd, 5);
+                                        }
+                                        else if (afterDash.Contains("c"))
                                         {
                                             ppt.SetPriority(wgd, 6);
                                         }
@@ -1286,11 +1326,19 @@ namespace Fluffy_Tabs
                                     case "sculpt,100":
                                         if (afterDash.Contains("A"))
                                         {
+                                            ppt.SetPriority(wgd, 5);
+                                        }
+                                        else if (afterDash.Contains("a"))
+                                        {
                                             ppt.SetPriority(wgd, 6);
                                         }
                                         break;
                                     case "craft,100":
                                         if (afterDash.Contains("C"))
+                                        {
+                                            ppt.SetPriority(wgd, 5);
+                                        }
+                                        else if (afterDash.Contains("c"))
                                         {
                                             ppt.SetPriority(wgd, 6);
                                         }
@@ -1298,20 +1346,32 @@ namespace Fluffy_Tabs
                                     case "refine chemicals,97":
                                         if (afterDash.Contains("C"))
                                         {
+                                            ppt.SetPriority(wgd, 5);
+                                        }
+                                        else if (afterDash.Contains("c"))
+                                        {
                                             ppt.SetPriority(wgd, 6);
                                         }
                                         break;
                                     case "produce drugs,95":
                                         if (afterDash.Contains("C"))
                                         {
+                                            ppt.SetPriority(wgd, 5);
+                                        }
+                                        else if (afterDash.Contains("c"))
+                                        {
                                             ppt.SetPriority(wgd, 6);
                                         }
                                         break;
                                     case "stonecut,90":
-                                        ppt.SetPriority(wgd, 9);
+                                        //ppt.SetPriority(wgd, 9);
                                         break;
                                     case "refine,80":
                                         if (afterDash.Contains("C"))
+                                        {
+                                            ppt.SetPriority(wgd, 5);
+                                        }
+                                        else if (afterDash.Contains("c"))
                                         {
                                             ppt.SetPriority(wgd, 6);
                                         }
@@ -1343,23 +1403,39 @@ namespace Fluffy_Tabs
                                     case "haul,10":
                                         if (afterDash.Contains("X"))
                                         {
-                                            ppt.SetPriority(wgd, 4);
+                                            ppt.SetPriority(wgd, 5);
+                                        }
+                                        else if (afterDash.Contains("x"))
+                                        {
+                                            ppt.SetPriority(wgd, 6);
                                         }
                                         break;
                                     case "clear snow,10":
                                         if (afterDash.Contains("Y"))
                                         {
-                                            ppt.SetPriority(wgd, 4);
+                                            ppt.SetPriority(wgd, 5);
+                                        }
+                                        else if (afterDash.Contains("y"))
+                                        {
+                                            ppt.SetPriority(wgd, 6);
                                         }
                                         break;
                                     case "clean,5":
                                         if (afterDash.Contains("Y"))
                                         {
-                                            ppt.SetPriority(wgd, 4);
+                                            ppt.SetPriority(wgd, 5);
+                                        }
+                                        else if (afterDash.Contains("y"))
+                                        {
+                                            ppt.SetPriority(wgd, 6);
                                         }
                                         break;
                                     case "research,0":
                                         if (afterDash.Contains("R"))
+                                        {
+                                            ppt.SetPriority(wgd, 5);
+                                        }
+                                        else if (afterDash.Contains("r"))
                                         {
                                             ppt.SetPriority(wgd, 6);
                                         }
