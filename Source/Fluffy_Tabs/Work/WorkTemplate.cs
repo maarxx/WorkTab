@@ -82,7 +82,7 @@ namespace Fluffy_Tabs
                 int priority = -1;
                 if (minimums.TryGetValue(wgd, out priority))
                 {
-                    if (ppt.GetPriority(wgd) < priority)
+                    if (ppt.GetPriority(wgd) > priority)
                     {
                         trySetPriority(pawn, wgd, priority);
                     }
@@ -94,7 +94,7 @@ namespace Fluffy_Tabs
                 int priority = -1;
                 if (maximums.TryGetValue(wgd, out priority))
                 {
-                    if (ppt.GetPriority(wgd) > priority)
+                    if (ppt.GetPriority(wgd) < priority)
                     {
                         trySetPriority(pawn, wgd, priority);
                     }
