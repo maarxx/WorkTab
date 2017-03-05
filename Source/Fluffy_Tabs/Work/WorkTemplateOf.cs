@@ -173,12 +173,11 @@
             HAULING.minimums.Add(MyMapper.s("haul,10"), 4);
 
             CLEANING.minimums.Add(MyMapper.s("clean,5"), 4);
-
             CLEANING.maximums.Add(MyMapper.s("haul,10"), 5);
 
-            FOOD.minimums.Add(MyMapper.s("cut,0"), 5);
-            FOOD.minimums.Add(MyMapper.s("hunt,0"), 6);
-            FOOD.minimums.Add(MyMapper.s("haul,10"), 7);
+            FOOD.baseline.Add(MyMapper.s("cut,0"), 5);
+            FOOD.baseline.Add(MyMapper.s("hunt,0"), 6);
+            FOOD.baseline.Add(MyMapper.s("haul,10"), 7);
 
             FOOD.maximums.Add(MyMapper.s("tame,80"), 8);
             FOOD.maximums.Add(MyMapper.s("train,70"), 8);
