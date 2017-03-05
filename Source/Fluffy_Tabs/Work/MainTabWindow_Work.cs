@@ -684,24 +684,19 @@ namespace Fluffy_Tabs
                     NumericMode = true;
             }
 
-            if (Widgets.ButtonImage(ref curPos, Direction.Left, Resources.Cog, "DEFAULT"))
+            if (Widgets.ButtonImage(ref curPos, Direction.Left, Resources.Cog, "Reset to Default, considering Flags in Names"))
             {
                 resetToTemplate(WorkTemplateOf.DEFAULT);
             }
 
-            if (Widgets.ButtonImage(ref curPos, Direction.Left, Resources.Cog, "HAULING"))
-            {
-                resetToTemplate(WorkTemplateOf.HAULING);
-            }
+            List<FloatMenuOption> alternates = new List<FloatMenuOption>();
+            alternates.Add(new FloatMenuOption("Hauling", delegate { resetToTemplate(WorkTemplateOf.HAULING); } ));
+            alternates.Add(new FloatMenuOption("Cleaning", delegate { resetToTemplate(WorkTemplateOf.CLEANING); }));
+            alternates.Add(new FloatMenuOption("Find Food", delegate { resetToTemplate(WorkTemplateOf.FOOD); }));
 
-            if (Widgets.ButtonImage(ref curPos, Direction.Left, Resources.Cog, "CLEANING"))
+            if (Widgets.ButtonImage(ref curPos, Direction.Left, Resources.Clock, "Apply an Alternate Template"))
             {
-                resetToTemplate(WorkTemplateOf.CLEANING);
-            }
-
-            if (Widgets.ButtonImage(ref curPos, Direction.Left, Resources.Cog, "FOOD"))
-            {
-                resetToTemplate(WorkTemplateOf.FOOD);
+                Find.WindowStack.Add(new FloatMenu(alternates));
             }
 
         }
