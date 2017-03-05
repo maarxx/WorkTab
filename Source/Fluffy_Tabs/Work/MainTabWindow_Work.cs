@@ -683,6 +683,35 @@ namespace Fluffy_Tabs
                 if ( Widgets.ButtonImage( ref curPos, Direction.Left, Resources.Priorities_Toggle, "FluffyTabs.PrioritiesIntTip".Translate() ) )
                     NumericMode = true;
             }
+
+            if (Widgets.ButtonImage(ref curPos, Direction.Left, Resources.Cog, "DEFAULT"))
+            {
+                resetToTemplate(WorkTemplateOf.DEFAULT);
+            }
+
+            if (Widgets.ButtonImage(ref curPos, Direction.Left, Resources.Cog, "HAULING"))
+            {
+                resetToTemplate(WorkTemplateOf.HAULING);
+            }
+
+            if (Widgets.ButtonImage(ref curPos, Direction.Left, Resources.Cog, "CLEANING"))
+            {
+                resetToTemplate(WorkTemplateOf.CLEANING);
+            }
+
+            if (Widgets.ButtonImage(ref curPos, Direction.Left, Resources.Cog, "FOOD"))
+            {
+                resetToTemplate(WorkTemplateOf.FOOD);
+            }
+
+        }
+
+        private void resetToTemplate(WorkTemplate template)
+        {
+            foreach (Pawn pawn in Find.VisibleMap.mapPawns.FreeColonists)
+            {
+                template.updatePawn(pawn);
+            }
         }
 
         private void DrawWorkHeader( WorkTypeDef worktype, Vector2 offset, float width, float height, int i )

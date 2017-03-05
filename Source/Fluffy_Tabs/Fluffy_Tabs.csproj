@@ -52,9 +52,12 @@
   <ItemGroup>
     <Compile Include="Core\Controller.cs" />
     <Compile Include="Core\Widgets_UI_TextureChooser.cs" />
+    <Compile Include="Work\MyMapper.cs" />
     <Compile Include="Work\Detours_WorkSettings.cs" />
     <Compile Include="Work\Dialog_CreateFavourite.cs" />
     <Compile Include="Work\MapComponent_Timekeeper.cs" />
+    <Compile Include="Work\WorkTemplate.cs" />
+    <Compile Include="Work\WorkTemplateOf.cs" />
     <Compile Include="Work\WorldObject_Favourites.cs" />
     <Compile Include="Work\WorldObject_Priorities.cs" />
     <Compile Include="Work\ModConfigurationMenu.cs" />
