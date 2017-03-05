@@ -14,7 +14,7 @@
             CLEANING = new WorkTemplate();
             FOOD = new WorkTemplate();
 
-            DEFAULT.baseline.Add(MyMapper.s("extinguish,0"), 1);
+            DEFAULT.baseline.Add(MyMapper.s("extinguish,0"), 2);
 
             HAULING.baseline.Add(MyMapper.s("haul,10"), 2);
 
