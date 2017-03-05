@@ -105,7 +105,7 @@ namespace Fluffy_Tabs
 
         private static void trySetPriority(Pawn pawn, WorkGiverDef wgd, int priority)
         {
-            if (pawn != null && priority > 0 && pawn.CapableOf(wgd))
+            if (pawn != null && pawn.CapableOf(wgd))
             {
                 PawnPrioritiesTracker ppt = WorldObject_Priorities.Get?.WorkgiverTracker(pawn);
                 ppt.SetPriority(wgd, priority);
