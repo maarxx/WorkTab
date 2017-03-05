@@ -121,6 +121,13 @@ namespace Fluffy_Tabs
         public string nameFlag;
         public WorkGiverDef wgd;
         public int priorityOverride;
+
+        public NameFlagOverride(string nameFlag, WorkGiverDef wgd, int priorityOverride)
+        {
+            this.nameFlag = nameFlag;
+            this.wgd = wgd;
+            this.priorityOverride = priorityOverride;
+        }
     }
 
 }
