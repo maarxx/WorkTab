@@ -184,7 +184,6 @@
             FOOD.maximums.Add(MyMapper.s("train,70"), 8);
             FOOD.maximums.Add(MyMapper.s("mine,100"), 8);
             FOOD.maximums.Add(MyMapper.s("drill,50"), 8);
-            FOOD.maximums.Add(MyMapper.s("cut,0"), 8);
             FOOD.maximums.Add(MyMapper.s("smith,115"), 8);
             FOOD.maximums.Add(MyMapper.s("work,75"), 8);
             FOOD.maximums.Add(MyMapper.s("produce components,50"), 8);
