@@ -23,7 +23,7 @@
             DEFAULT.baseline.Add(MyMapper.s("feed,60"), 4);
             DEFAULT.baseline.Add(MyMapper.s("operate,50"), 0);
             DEFAULT.baseline.Add(MyMapper.s("take to operate,5"), 2);
-            DEFAULT.baseline.Add(MyMapper.s("visit,3"), 9);
+            DEFAULT.baseline.Add(MyMapper.s("visit,3"), 0);
             DEFAULT.baseline.Add(MyMapper.s("get bed rest in,0"), 2);
             DEFAULT.baseline.Add(MyMapper.s("flick switch on,500"), 2);
             DEFAULT.baseline.Add(MyMapper.s("do execution on,110"), 2);
