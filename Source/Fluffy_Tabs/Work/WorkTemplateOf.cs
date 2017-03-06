@@ -175,25 +175,28 @@
             CLEANING.minimums.Add(MyMapper.s("clean,5"), 4);
             CLEANING.maximums.Add(MyMapper.s("haul,10"), 5);
 
+            FOOD.baseline.Add(MyMapper.s("haul,10"), 4);
             FOOD.baseline.Add(MyMapper.s("cut,0"), 5);
             FOOD.baseline.Add(MyMapper.s("hunt,0"), 6);
-            FOOD.baseline.Add(MyMapper.s("haul,10"), 7);
 
-            FOOD.maximums.Add(MyMapper.s("tame,80"), 8);
-            FOOD.maximums.Add(MyMapper.s("train,70"), 8);
-            FOOD.maximums.Add(MyMapper.s("mine,100"), 8);
-            FOOD.maximums.Add(MyMapper.s("drill,50"), 8);
-            FOOD.maximums.Add(MyMapper.s("smith,115"), 8);
-            FOOD.maximums.Add(MyMapper.s("work,75"), 8);
-            FOOD.maximums.Add(MyMapper.s("produce components,50"), 8);
-            FOOD.maximums.Add(MyMapper.s("tailor,110"), 8);
-            FOOD.maximums.Add(MyMapper.s("sculpt,100"), 8);
-            FOOD.maximums.Add(MyMapper.s("craft,100"), 8);
-            FOOD.maximums.Add(MyMapper.s("refine chemicals,97"), 8);
-            FOOD.maximums.Add(MyMapper.s("produce drugs,95"), 8);
-            FOOD.maximums.Add(MyMapper.s("stonecut,90"), 8);
-            FOOD.maximums.Add(MyMapper.s("refine,80"), 8);
-            FOOD.maximums.Add(MyMapper.s("research,0"), 8);
+            FOOD.ifInterest.Add(MyMapper.s("harvest,100"), 3);
+            FOOD.ifInterest.Add(MyMapper.s("sow,50"), 3);
+
+            FOOD.maximums.Add(MyMapper.s("tame,80"), 7);
+            FOOD.maximums.Add(MyMapper.s("train,70"), 7);
+            FOOD.maximums.Add(MyMapper.s("mine,100"), 7);
+            FOOD.maximums.Add(MyMapper.s("drill,50"), 7);
+            FOOD.maximums.Add(MyMapper.s("smith,115"), 7);
+            FOOD.maximums.Add(MyMapper.s("work,75"), 7);
+            FOOD.maximums.Add(MyMapper.s("produce components,50"), 7);
+            FOOD.maximums.Add(MyMapper.s("tailor,110"), 7);
+            FOOD.maximums.Add(MyMapper.s("sculpt,100"), 7);
+            FOOD.maximums.Add(MyMapper.s("craft,100"), 7);
+            FOOD.maximums.Add(MyMapper.s("refine chemicals,97"), 7);
+            FOOD.maximums.Add(MyMapper.s("produce drugs,95"), 7);
+            FOOD.maximums.Add(MyMapper.s("stonecut,90"), 7);
+            FOOD.maximums.Add(MyMapper.s("refine,80"), 7);
+            FOOD.maximums.Add(MyMapper.s("research,0"), 7);
 
         }
     }
