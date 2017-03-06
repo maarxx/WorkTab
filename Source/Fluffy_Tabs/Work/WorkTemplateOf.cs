@@ -197,8 +197,8 @@
             FOOD.maximums.Add(MyMapper.s("stonecut,90"), 7);
             FOOD.maximums.Add(MyMapper.s("refine,80"), 7);
             FOOD.maximums.Add(MyMapper.s("research,0"), 7);
+            FOOD.maximums.Add(MyMapper.s("clear snow,10"), 7);
             FOOD.maximums.Add(MyMapper.s("clean,5"), 7);
-            FOOD.maximums.Add(MyMapper.s("haul,10"), 7);
 
         }
     }
