@@ -193,12 +193,12 @@
             CLEANING.minimums.Add(MyMapper.s("clean,5"), 3);
             CLEANING.maximums.Add(MyMapper.s("haul,10"), 4);
 
-            FOOD.ifInterest.Add(MyMapper.s("harvest,100"), 3);
-            FOOD.ifInterest.Add(MyMapper.s("sow,50"), 3);
-
             FOOD.baseline.Add(MyMapper.s("haul,10"), 3);
             FOOD.baseline.Add(MyMapper.s("cut,0"), 4);
             FOOD.baseline.Add(MyMapper.s("hunt,0"), 5);
+
+            FOOD.ifInterest.Add(MyMapper.s("harvest,100"), 3);
+            FOOD.ifInterest.Add(MyMapper.s("sow,50"), 3);
 
             FOOD.maximums.Add(MyMapper.s("tame,80"), 6);
             FOOD.maximums.Add(MyMapper.s("train,70"), 6);
