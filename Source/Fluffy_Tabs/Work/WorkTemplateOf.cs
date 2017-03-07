@@ -9,13 +9,19 @@
 
         static WorkTemplateOf()
         {
+
+
             DEFAULT = new WorkTemplate();
             HAULING = new WorkTemplate();
             CLEANING = new WorkTemplate();
             FOOD = new WorkTemplate();
 
+
+
             DEFAULT.baseline.Add(MyMapper.s("extinguish,0"), 2);
+
             DEFAULT.baseline.Add(MyMapper.s("receive treatment in,0"), 2);
+
             DEFAULT.baseline.Add(MyMapper.s("treat,100"), 0);
             DEFAULT.baseline.Add(MyMapper.s("rescue,90"), 2);
             DEFAULT.baseline.Add(MyMapper.s("operate,80"), 0);
@@ -24,25 +30,32 @@
             DEFAULT.baseline.Add(MyMapper.s("operate,50"), 0);
             DEFAULT.baseline.Add(MyMapper.s("take to operate,5"), 2);
             DEFAULT.baseline.Add(MyMapper.s("visit,3"), 0);
+
             DEFAULT.baseline.Add(MyMapper.s("get bed rest in,0"), 2);
+
             DEFAULT.baseline.Add(MyMapper.s("flick switch on,500"), 2);
+
             DEFAULT.baseline.Add(MyMapper.s("do execution on,110"), 2);
             DEFAULT.baseline.Add(MyMapper.s("release,100"), 2);
             DEFAULT.baseline.Add(MyMapper.s("take to bed,90"), 2);
             DEFAULT.baseline.Add(MyMapper.s("feed,80"), 4);
             DEFAULT.baseline.Add(MyMapper.s("deliver food for,70"), 4);
             DEFAULT.baseline.Add(MyMapper.s("chat with,60"), 0);
+
             DEFAULT.baseline.Add(MyMapper.s("slaughter,100"), 2);
             DEFAULT.baseline.Add(MyMapper.s("milk,90"), 0);
             DEFAULT.baseline.Add(MyMapper.s("shear,85"), 0);
             DEFAULT.baseline.Add(MyMapper.s("tame,80"), 0);
             DEFAULT.baseline.Add(MyMapper.s("train,70"), 0);
+
             DEFAULT.baseline.Add(MyMapper.s("cook,100"), 0);
             DEFAULT.baseline.Add(MyMapper.s("cook,97"), 0);
             DEFAULT.baseline.Add(MyMapper.s("butcher,90"), 0);
             DEFAULT.baseline.Add(MyMapper.s("fill,50"), 4);
             DEFAULT.baseline.Add(MyMapper.s("brew,30"), 4);
+
             DEFAULT.baseline.Add(MyMapper.s("hunt,0"), 8);
+
             DEFAULT.baseline.Add(MyMapper.s("modify,100"), 0);
             DEFAULT.baseline.Add(MyMapper.s("replace broken components in,90"), 0);
             DEFAULT.baseline.Add(MyMapper.s("repair,80"), 2);
@@ -55,21 +68,27 @@
             DEFAULT.baseline.Add(MyMapper.s("uninstall,19"), 4);
             DEFAULT.baseline.Add(MyMapper.s("remove floor,10"), 0);
             DEFAULT.baseline.Add(MyMapper.s("smooth,5"), 0);
+
             DEFAULT.baseline.Add(MyMapper.s("harvest,100"), 0);
             DEFAULT.baseline.Add(MyMapper.s("sow,50"), 0);
+
             DEFAULT.baseline.Add(MyMapper.s("mine,100"), 9);
             DEFAULT.baseline.Add(MyMapper.s("drill,50"), 9);
+
             DEFAULT.baseline.Add(MyMapper.s("cut,0"), 7);
+
             DEFAULT.baseline.Add(MyMapper.s("smith,115"), 0);
             DEFAULT.baseline.Add(MyMapper.s("work,75"), 0);
             DEFAULT.baseline.Add(MyMapper.s("produce components,50"), 0);
             DEFAULT.baseline.Add(MyMapper.s("tailor,110"), 0);
-            DEFAULT.baseline.Add(MyMapper.s("sculpt,100"), 0);
             DEFAULT.baseline.Add(MyMapper.s("craft,100"), 0);
             DEFAULT.baseline.Add(MyMapper.s("refine chemicals,97"), 0);
             DEFAULT.baseline.Add(MyMapper.s("produce drugs,95"), 0);
             DEFAULT.baseline.Add(MyMapper.s("stonecut,90"), 9);
             DEFAULT.baseline.Add(MyMapper.s("refine,80"), 9);
+
+            DEFAULT.baseline.Add(MyMapper.s("sculpt,100"), 0);
+
             DEFAULT.baseline.Add(MyMapper.s("unload,120"), 4);
             DEFAULT.baseline.Add(MyMapper.s("load,110"), 4);
             DEFAULT.baseline.Add(MyMapper.s("strip,100"), 4);
@@ -83,23 +102,32 @@
             DEFAULT.baseline.Add(MyMapper.s("take beer,20"), 4);
             DEFAULT.baseline.Add(MyMapper.s("fill,19"), 4);
             DEFAULT.baseline.Add(MyMapper.s("haul,10"), 8);
+
             DEFAULT.baseline.Add(MyMapper.s("clear snow,10"), 8);
             DEFAULT.baseline.Add(MyMapper.s("clean,5"), 8);
+
             DEFAULT.baseline.Add(MyMapper.s("research,0"), 0);
+
             DEFAULT.baseline.Add(MyMapper.s("manage,100"), 3);
+
+
 
             DEFAULT.ifInterest.Add(MyMapper.s("treat,100"), 1);
             DEFAULT.ifInterest.Add(MyMapper.s("operate,80"), 2);
             DEFAULT.ifInterest.Add(MyMapper.s("treat,70"), 1);
             DEFAULT.ifInterest.Add(MyMapper.s("operate,50"), 2);
+
             DEFAULT.ifInterest.Add(MyMapper.s("chat with,60"), 3);
+
             DEFAULT.ifInterest.Add(MyMapper.s("milk,90"), 3);
             DEFAULT.ifInterest.Add(MyMapper.s("shear,85"), 3);
             DEFAULT.ifInterest.Add(MyMapper.s("tame,80"), 9);
             DEFAULT.ifInterest.Add(MyMapper.s("train,70"), 9);
+
             DEFAULT.ifInterest.Add(MyMapper.s("cook,100"), 2);
             DEFAULT.ifInterest.Add(MyMapper.s("cook,97"), 2);
             DEFAULT.ifInterest.Add(MyMapper.s("butcher,90"), 2);
+
             DEFAULT.ifInterest.Add(MyMapper.s("modify,100"), 3);
             DEFAULT.ifInterest.Add(MyMapper.s("replace broken components in,90"), 2);
             DEFAULT.ifInterest.Add(MyMapper.s("build roof,70"), 2);
@@ -107,21 +135,28 @@
             DEFAULT.ifInterest.Add(MyMapper.s("construct,50"), 2);
             DEFAULT.ifInterest.Add(MyMapper.s("remove floor,10"), 4);
             DEFAULT.ifInterest.Add(MyMapper.s("smooth,5"), 4);
+
             DEFAULT.ifInterest.Add(MyMapper.s("harvest,100"), 9);
             DEFAULT.ifInterest.Add(MyMapper.s("sow,50"), 9);
+
             DEFAULT.ifInterest.Add(MyMapper.s("mine,100"), 9);
             DEFAULT.ifInterest.Add(MyMapper.s("drill,50"), 9);
+
             DEFAULT.ifInterest.Add(MyMapper.s("smith,115"), 9);
             DEFAULT.ifInterest.Add(MyMapper.s("work,75"), 9);
             DEFAULT.ifInterest.Add(MyMapper.s("produce components,50"), 9);
             DEFAULT.ifInterest.Add(MyMapper.s("tailor,110"), 9);
-            DEFAULT.ifInterest.Add(MyMapper.s("sculpt,100"), 9);
             DEFAULT.ifInterest.Add(MyMapper.s("craft,100"), 9);
             DEFAULT.ifInterest.Add(MyMapper.s("refine chemicals,97"), 9);
             DEFAULT.ifInterest.Add(MyMapper.s("produce drugs,95"), 9);
             DEFAULT.ifInterest.Add(MyMapper.s("stonecut,90"), 9);
             DEFAULT.ifInterest.Add(MyMapper.s("refine,80"), 9);
+
+            DEFAULT.ifInterest.Add(MyMapper.s("sculpt,100"), 9);
+
             DEFAULT.ifInterest.Add(MyMapper.s("research,0"), 9);
+
+
 
             DEFAULT.nameFlagOverrides.Add(new NameFlagOverride("H", MyMapper.s("tame,80"),5));
             DEFAULT.nameFlagOverrides.Add(new NameFlagOverride("h", MyMapper.s("tame,80"), 6));
@@ -158,6 +193,9 @@
             DEFAULT.nameFlagOverrides.Add(new NameFlagOverride("A", MyMapper.s("sculpt,100"), 5));
             DEFAULT.nameFlagOverrides.Add(new NameFlagOverride("a", MyMapper.s("sculpt,100"), 6));
 
+            DEFAULT.nameFlagOverrides.Add(new NameFlagOverride("R", MyMapper.s("research,0"), 5));
+            DEFAULT.nameFlagOverrides.Add(new NameFlagOverride("r", MyMapper.s("research,0"), 6));
+
             DEFAULT.nameFlagOverrides.Add(new NameFlagOverride("X", MyMapper.s("haul,10"), 5));
             DEFAULT.nameFlagOverrides.Add(new NameFlagOverride("x", MyMapper.s("haul,10"), 6));
 
@@ -167,20 +205,27 @@
             DEFAULT.nameFlagOverrides.Add(new NameFlagOverride("Y", MyMapper.s("clean,5"), 5));
             DEFAULT.nameFlagOverrides.Add(new NameFlagOverride("y", MyMapper.s("clean,5"), 6));
 
-            DEFAULT.nameFlagOverrides.Add(new NameFlagOverride("R", MyMapper.s("research,0"), 5));
-            DEFAULT.nameFlagOverrides.Add(new NameFlagOverride("r", MyMapper.s("research,0"), 6));
+
 
             HAULING.minimums.Add(MyMapper.s("haul,10"), 4);
 
+
+
             CLEANING.minimums.Add(MyMapper.s("clean,5"), 4);
             CLEANING.maximums.Add(MyMapper.s("haul,10"), 5);
+
+
 
             FOOD.baseline.Add(MyMapper.s("haul,10"), 4);
             FOOD.baseline.Add(MyMapper.s("cut,0"), 5);
             FOOD.baseline.Add(MyMapper.s("hunt,0"), 6);
 
+
+
             FOOD.ifInterest.Add(MyMapper.s("harvest,100"), 3);
             FOOD.ifInterest.Add(MyMapper.s("sow,50"), 3);
+
+
 
             FOOD.maximums.Add(MyMapper.s("tame,80"), 7);
             FOOD.maximums.Add(MyMapper.s("train,70"), 7);
