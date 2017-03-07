@@ -34,7 +34,7 @@
             DEFAULT.baseline.Add(MyMapper.s("do execution on,110"), 2);
             DEFAULT.baseline.Add(MyMapper.s("release,100"), 2);
             DEFAULT.baseline.Add(MyMapper.s("take to bed,90"), 2);
-            DEFAULT.baseline.Add(MyMapper.s("feed,80"), 3);
+            DEFAULT.baseline.Add(MyMapper.s("feed,80"), 4);
             DEFAULT.baseline.Add(MyMapper.s("deliver food for,70"), 3);
             DEFAULT.baseline.Add(MyMapper.s("chat with,60"), 0);
 
@@ -82,7 +82,6 @@
             DEFAULT.baseline.Add(MyMapper.s("craft,100"), 0);
             DEFAULT.baseline.Add(MyMapper.s("refine chemicals,97"), 0);
             DEFAULT.baseline.Add(MyMapper.s("produce drugs,95"), 0);
-
             DEFAULT.baseline.Add(MyMapper.s("stonecut,90"), 9);
             DEFAULT.baseline.Add(MyMapper.s("refine,80"), 9);
 
@@ -181,6 +180,7 @@
 
             DEFAULT.nameFlagOverrides.Add(new NameFlagOverride("Y", MyMapper.s("clear snow,10"), 4));
             DEFAULT.nameFlagOverrides.Add(new NameFlagOverride("y", MyMapper.s("clear snow,10"), 5));
+
             DEFAULT.nameFlagOverrides.Add(new NameFlagOverride("Y", MyMapper.s("clean,5"), 4));
             DEFAULT.nameFlagOverrides.Add(new NameFlagOverride("y", MyMapper.s("clean,5"), 5));
 
