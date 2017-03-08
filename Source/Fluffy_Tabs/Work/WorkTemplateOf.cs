@@ -75,7 +75,7 @@
             DEFAULT.baseline.Add(MyMapper.s("mine,100"), 9);
             DEFAULT.baseline.Add(MyMapper.s("drill,50"), 9);
 
-            DEFAULT.baseline.Add(MyMapper.s("cut,0"), 7);
+            DEFAULT.baseline.Add(MyMapper.s("cut,0"), 8);
 
             DEFAULT.baseline.Add(MyMapper.s("smith,115"), 0);
             DEFAULT.baseline.Add(MyMapper.s("work,75"), 0);
@@ -101,7 +101,7 @@
             DEFAULT.baseline.Add(MyMapper.s("work at,30"), 4);
             DEFAULT.baseline.Add(MyMapper.s("take beer,20"), 4);
             DEFAULT.baseline.Add(MyMapper.s("fill,19"), 4);
-            DEFAULT.baseline.Add(MyMapper.s("haul,10"), 8);
+            DEFAULT.baseline.Add(MyMapper.s("haul,10"), 7);
 
             DEFAULT.baseline.Add(MyMapper.s("clear snow,10"), 8);
             DEFAULT.baseline.Add(MyMapper.s("clean,5"), 8);
