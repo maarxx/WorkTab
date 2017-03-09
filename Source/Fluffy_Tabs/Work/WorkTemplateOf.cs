@@ -65,8 +65,7 @@
             DEFAULT.baseline.Add(MyMapper.s("remove roof,60"), 4);
             DEFAULT.baseline.Add(MyMapper.s("construct,50"), 0);
             DEFAULT.baseline.Add(MyMapper.s("work on,40"), 4);
-            //DEFAULT.baseline.Add(MyMapper.s("work on,30"), 4);
-            DEFAULT.baseline.Add(MyMapper.s("work on,9"), 4); // JTReplaceWalls changes work on,30 to work on,9
+            DEFAULT.baseline.Add(MyMapper.s("work on,30"), 4);
             DEFAULT.baseline.Add(MyMapper.s("deconstruct,20"), 4);
             DEFAULT.baseline.Add(MyMapper.s("uninstall,19"), 4);
             DEFAULT.baseline.Add(MyMapper.s("remove floor,10"), 0);
