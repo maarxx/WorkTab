@@ -59,8 +59,10 @@
             DEFAULT.baseline.Add(MyMapper.s("modify,100"), 0);
             DEFAULT.baseline.Add(MyMapper.s("replace broken components in,90"), 0);
             DEFAULT.baseline.Add(MyMapper.s("repair,80"), 2);
-            DEFAULT.baseline.Add(MyMapper.s("build roof,70"), 0);
-            DEFAULT.baseline.Add(MyMapper.s("remove roof,60"), 0);
+            //DEFAULT.baseline.Add(MyMapper.s("build roof,70"), 0);
+            //DEFAULT.baseline.Add(MyMapper.s("remove roof,60"), 0);
+            DEFAULT.baseline.Add(MyMapper.s("build roof,70"), 4);
+            DEFAULT.baseline.Add(MyMapper.s("remove roof,60"), 4);
             DEFAULT.baseline.Add(MyMapper.s("construct,50"), 0);
             DEFAULT.baseline.Add(MyMapper.s("work on,40"), 4);
             DEFAULT.baseline.Add(MyMapper.s("work on,30"), 4);
@@ -130,8 +132,8 @@
 
             DEFAULT.ifInterest.Add(MyMapper.s("modify,100"), 3);
             DEFAULT.ifInterest.Add(MyMapper.s("replace broken components in,90"), 2);
-            DEFAULT.ifInterest.Add(MyMapper.s("build roof,70"), 2);
-            DEFAULT.ifInterest.Add(MyMapper.s("remove roof,60"), 2);
+            //DEFAULT.ifInterest.Add(MyMapper.s("build roof,70"), 2);
+            //DEFAULT.ifInterest.Add(MyMapper.s("remove roof,60"), 2);
             DEFAULT.ifInterest.Add(MyMapper.s("construct,50"), 2);
             DEFAULT.ifInterest.Add(MyMapper.s("remove floor,10"), 4);
             DEFAULT.ifInterest.Add(MyMapper.s("smooth,5"), 4);
