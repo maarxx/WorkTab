@@ -259,6 +259,8 @@
             FLEX.maximums.Add(MyMapper.s("chat with,60"), 8);
             FLEX.maximums.Add(MyMapper.s("tame,80"), 8);
             FLEX.maximums.Add(MyMapper.s("train,70"), 8);
+            FLEX.maximums.Add(MyMapper.s("harvest,100"), 8);
+            FLEX.maximums.Add(MyMapper.s("sow,50"), 8);
             FLEX.maximums.Add(MyMapper.s("mine,100"), 8);
             FLEX.maximums.Add(MyMapper.s("drill,50"), 8);
             FLEX.maximums.Add(MyMapper.s("smith,115"), 8);
