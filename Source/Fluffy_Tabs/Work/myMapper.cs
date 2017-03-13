@@ -21,8 +21,17 @@ namespace Fluffy_Tabs
         static Dictionary<string, WorkGiverDef> stringToWorkGiverDef = new Dictionary<string, WorkGiverDef>();
         static Dictionary<WorkGiverDef, string> workGiverDefToString = new Dictionary<WorkGiverDef, string>();
 
+        static Dictionary<WorkGiverDef, int> absoluteOrdinals = new Dictionary<WorkGiverDef, int>();
+
         static MyMapper()
         {
+            foreach (WorkGiverDef wgd in DefDatabase<WorkGiverDef>.AllDefsListForReading)
+            {
+                WorkTypeDef wtd = wgd.workType;
+                int absoluteOrdinal = wtd.naturalPriority * 100 + wgd.priorityInType;
+                absoluteOrdinals.Add(wgd, absoluteOrdinal);
+            }
+
             foreach (WorkGiverDef wgd in DefDatabase<WorkGiverDef>.AllDefsListForReading)
             {
                 string stringID = wgd.verb + "," + wgd.priorityInType;
@@ -42,6 +51,13 @@ namespace Fluffy_Tabs
         {
             string myOut = null;
             workGiverDefToString.TryGetValue(wgd, out myOut);
+            return myOut;
+        }
+
+        public static int ordinal(WorkGiverDef wgd)
+        {
+            int myOut;
+            absoluteOrdinals.TryGetValue(wgd, out myOut);
             return myOut;
         }
 

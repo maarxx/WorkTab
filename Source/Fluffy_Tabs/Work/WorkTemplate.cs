@@ -111,6 +111,89 @@ namespace Fluffy_Tabs
                 ppt.SetPriority(wgd, priority);
             }
         }
+
+        private static void processOrderedFlags(Pawn p)
+        {
+            string pawnName = p.NameStringShort;
+            bool hasDash = pawnName.Contains("-");
+            string afterDash = "";
+            if (hasDash)
+            {
+                afterDash = pawnName.Substring(pawnName.LastIndexOf('-') + 1);
+            }
+
+            int lastPriority = 3;
+            int lastOrdinal = 0;
+
+            int curPriority = 3;
+            int curOrdinal = 0;
+
+            bool curCaps = true;
+            bool lastCaps = true;
+
+            //WorkTemplateOf.DEFAULT.updatePawn(p);
+
+            foreach (char c in afterDash)
+            {
+                List<WorkGiverDef> wgds = new List<WorkGiverDef>();
+                switch (c)
+                {
+                    case 'D':
+                        wgds.Add(MyMapper.s("treat,100"));
+                        break;
+                    case 'K':
+                        wgds.Add(MyMapper.s("cook,100"));
+                        break;
+                    case 'B':
+                        wgds.Add(MyMapper.s("construct,50"));
+                        break;
+                    case 'S':
+                        wgds.Add(MyMapper.s("operate,80"));
+                        break;
+                    case 'W':
+                        wgds.Add(MyMapper.s("chat with,60"));
+                        break;
+                    
+                    
+                    case 'H':
+                    case 'h':
+                        wgds.Add(MyMapper.s("tame,80"));
+                        break;
+                    case 'U':
+                    case 'u':
+                        wgds.Add(MyMapper.s("hunt,0"));
+                        break;
+                    case 'G':
+                    case 'g':
+                        wgds.Add(MyMapper.s("harvest,100"));
+                        break;
+                    case 'M':
+                    case 'm':
+                        wgds.Add(MyMapper.s("mine,100"));
+                        break;
+                    case 'C':
+                    case 'c':
+                        wgds.Add(MyMapper.s("smith,115"));
+                        break;
+                    case 'A':
+                    case 'a':
+                        wgds.Add(MyMapper.s("sculpt,100"));
+                        break;
+                    case 'R':
+                    case 'r':
+                        wgds.Add(MyMapper.s("research,0"));
+                        break;
+                    case 'X':
+                    case 'x':
+                        wgds.Add(MyMapper.s("haul,10"));
+                        break;
+                    case 'Y':
+                    case 'y':
+                        wgds.Add(MyMapper.s("clean,5"));
+                        break;
+                }
+            }
+        }
     }
 
     // Why the hell isn't Tuple working?

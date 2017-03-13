@@ -5,7 +5,7 @@
         public static WorkTemplate DEFAULT;
         public static WorkTemplate HAULING;
         public static WorkTemplate CLEANING;
-        public static WorkTemplate FOOD;
+        //public static WorkTemplate FOOD;
         public static WorkTemplate FLEX;
 
         static WorkTemplateOf()
@@ -15,7 +15,7 @@
             DEFAULT = new WorkTemplate();
             HAULING = new WorkTemplate();
             CLEANING = new WorkTemplate();
-            FOOD = new WorkTemplate();
+            //FOOD = new WorkTemplate();
             FLEX = new WorkTemplate();
 
 
@@ -56,20 +56,24 @@
             DEFAULT.baseline.Add(MyMapper.s("fill,50"), 4);
             DEFAULT.baseline.Add(MyMapper.s("brew,30"), 4);
 
-            DEFAULT.baseline.Add(MyMapper.s("hunt,0"), 8);
+            DEFAULT.baseline.Add(MyMapper.s("hunt,0"), 9);
 
             DEFAULT.baseline.Add(MyMapper.s("modify,100"), 0);
             DEFAULT.baseline.Add(MyMapper.s("replace broken components in,90"), 0);
             DEFAULT.baseline.Add(MyMapper.s("repair,80"), 2);
+
             //DEFAULT.baseline.Add(MyMapper.s("build roof,70"), 0);
             //DEFAULT.baseline.Add(MyMapper.s("remove roof,60"), 0);
             DEFAULT.baseline.Add(MyMapper.s("build roof,70"), 4);
             DEFAULT.baseline.Add(MyMapper.s("remove roof,60"), 4);
+
             DEFAULT.baseline.Add(MyMapper.s("construct,50"), 0);
             DEFAULT.baseline.Add(MyMapper.s("work on,40"), 4);
+
             //DEFAULT.baseline.Add(MyMapper.s("work on,30"), 4);
             DEFAULT.baseline.Add(MyMapper.s("work on,9"), 4); // JTReplaceWalls changes work on,30 to work on,9
             DEFAULT.baseline.Add(MyMapper.s("mine_JTReplaceWalls,22"), 4); // Added by JTReplaceWalls
+
             DEFAULT.baseline.Add(MyMapper.s("deconstruct,20"), 4);
             DEFAULT.baseline.Add(MyMapper.s("uninstall,19"), 4);
             DEFAULT.baseline.Add(MyMapper.s("remove floor,10"), 0);
@@ -78,10 +82,10 @@
             DEFAULT.baseline.Add(MyMapper.s("harvest,100"), 0);
             DEFAULT.baseline.Add(MyMapper.s("sow,50"), 0);
 
-            DEFAULT.baseline.Add(MyMapper.s("mine,100"), 9);
-            DEFAULT.baseline.Add(MyMapper.s("drill,50"), 9);
+            DEFAULT.baseline.Add(MyMapper.s("mine,100"), 0);
+            DEFAULT.baseline.Add(MyMapper.s("drill,50"), 0);
 
-            DEFAULT.baseline.Add(MyMapper.s("cut,0"), 8);
+            DEFAULT.baseline.Add(MyMapper.s("cut,0"), 9);
 
             DEFAULT.baseline.Add(MyMapper.s("smith,115"), 0);
             DEFAULT.baseline.Add(MyMapper.s("work,75"), 0);
@@ -117,7 +121,7 @@
             DEFAULT.baseline.Add(MyMapper.s("manage,100"), 3);
 
 
-
+            /*
             DEFAULT.ifInterest.Add(MyMapper.s("treat,100"), 1);
             DEFAULT.ifInterest.Add(MyMapper.s("operate,80"), 2);
             DEFAULT.ifInterest.Add(MyMapper.s("treat,70"), 1);
@@ -161,9 +165,9 @@
             DEFAULT.ifInterest.Add(MyMapper.s("sculpt,100"), 9);
 
             DEFAULT.ifInterest.Add(MyMapper.s("research,0"), 9);
+            */
 
-
-
+            /*
             DEFAULT.nameFlagOverrides.Add(new NameFlagOverride("H", MyMapper.s("tame,80"),5));
             DEFAULT.nameFlagOverrides.Add(new NameFlagOverride("h", MyMapper.s("tame,80"), 6));
             DEFAULT.nameFlagOverrides.Add(new NameFlagOverride("H", MyMapper.s("train,70"), 5));
@@ -210,18 +214,18 @@
 
             DEFAULT.nameFlagOverrides.Add(new NameFlagOverride("Y", MyMapper.s("clean,5"), 5));
             DEFAULT.nameFlagOverrides.Add(new NameFlagOverride("y", MyMapper.s("clean,5"), 6));
-
+            */
 
 
             HAULING.minimums.Add(MyMapper.s("haul,10"), 4);
 
-
-
             CLEANING.minimums.Add(MyMapper.s("clean,5"), 4);
+
+            /*
             CLEANING.maximums.Add(MyMapper.s("haul,10"), 5);
+            */
 
-
-
+            /*
             FOOD.baseline.Add(MyMapper.s("haul,10"), 4);
             FOOD.baseline.Add(MyMapper.s("cut,0"), 5);
             FOOD.baseline.Add(MyMapper.s("hunt,0"), 6);
@@ -250,7 +254,7 @@
             FOOD.maximums.Add(MyMapper.s("research,0"), 7);
             FOOD.maximums.Add(MyMapper.s("clear snow,10"), 7);
             FOOD.maximums.Add(MyMapper.s("clean,5"), 7);
-
+            */
 
 
             FLEX.maximums.Add(MyMapper.s("cut,0"), 8);
