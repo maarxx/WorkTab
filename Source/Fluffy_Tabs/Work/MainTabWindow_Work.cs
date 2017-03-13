@@ -693,6 +693,7 @@ namespace Fluffy_Tabs
             alternates.Add(new FloatMenuOption("Hauling", delegate { resetToTemplate(WorkTemplateOf.HAULING); } ));
             alternates.Add(new FloatMenuOption("Cleaning", delegate { resetToTemplate(WorkTemplateOf.CLEANING); }));
             alternates.Add(new FloatMenuOption("Find Food", delegate { resetToTemplate(WorkTemplateOf.FOOD); }));
+            alternates.Add(new FloatMenuOption("Flex", delegate { resetToTemplate(WorkTemplateOf.FLEX); }));
 
             if (Widgets.ButtonImage(ref curPos, Direction.Left, Resources.Clock, "Apply an Alternate Template"))
             {
