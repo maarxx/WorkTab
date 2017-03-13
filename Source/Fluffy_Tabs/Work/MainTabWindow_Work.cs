@@ -683,6 +683,30 @@ namespace Fluffy_Tabs
                 if ( Widgets.ButtonImage( ref curPos, Direction.Left, Resources.Priorities_Toggle, "FluffyTabs.PrioritiesIntTip".Translate() ) )
                     NumericMode = true;
             }
+
+            if (Widgets.ButtonImage(ref curPos, Direction.Left, Resources.Cog, "Reset to Default, considering Flags in Names"))
+            {
+                foreach (Pawn pawn in Find.VisibleMap.mapPawns.FreeColonists)
+                {
+                    NameTagProcessor.processOrderedFlags(pawn);
+                }
+            }
+
+            List<FloatMenuOption> alternates = new List<FloatMenuOption>();
+            alternates.Add(new FloatMenuOption("Flex", delegate { resetToTemplate(WorkTemplateOf.FLEX); }));
+            if (Widgets.ButtonImage(ref curPos, Direction.Left, Resources.Clock, "Apply an Alternate Template"))
+            {
+                Find.WindowStack.Add(new FloatMenu(alternates));
+            }
+
+        }
+
+        private void resetToTemplate(WorkTemplate template)
+        {
+            foreach (Pawn pawn in Find.VisibleMap.mapPawns.FreeColonists)
+            {
+                template.updatePawn(pawn);
+            }
         }
 
         private void DrawWorkHeader( WorkTypeDef worktype, Vector2 offset, float width, float height, int i )

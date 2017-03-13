@@ -55,6 +55,10 @@
     <Compile Include="Work\Detours_WorkSettings.cs" />
     <Compile Include="Work\Dialog_CreateFavourite.cs" />
     <Compile Include="Work\MapComponent_Timekeeper.cs" />
+    <Compile Include="Work\MyMapper.cs" />
+    <Compile Include="Work\NameTagProcessor.cs" />
+    <Compile Include="Work\WorkTemplate.cs" />
+    <Compile Include="Work\WorkTemplateOf.cs" />
     <Compile Include="Work\WorldObject_Favourites.cs" />
     <Compile Include="Work\WorldObject_Priorities.cs" />
     <Compile Include="Work\ModConfigurationMenu.cs" />
@@ -70,7 +74,8 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>node ../../postbuild update -x</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
