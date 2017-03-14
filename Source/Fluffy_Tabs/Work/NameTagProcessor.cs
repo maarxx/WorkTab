@@ -147,12 +147,6 @@ namespace Fluffy_Tabs
                 }
             }
 
-            Log.Message("Pawn: " + p.NameStringShort);
-            foreach (WorkGiverDef wgd in final)
-            {
-                Log.Message(wgd.verb + "," + wgd.priorityInType);
-            }
-
             foreach (WorkGiverDef wgd in DefDatabase<WorkGiverDef>.AllDefsListForReading)
             {
                 if (!final.Contains(wgd))
@@ -266,6 +260,70 @@ namespace Fluffy_Tabs
             return output;
         }
 
+        public static void generateNameTag(Pawn pawn)
+        {
+            string pawnName = pawn.NameStringShort;
+
+            bool hasDash = pawnName.Contains(" -");
+            string beforeDash = pawnName;
+            if (hasDash)
+            {
+                beforeDash = pawnName.Substring(0, pawnName.LastIndexOf(" -"));
+            }
+
+            string nameTag = " -";
+            if ( pawnHasInterest(pawn, MyMapper.s("treat,100")) )
+            {
+                nameTag += "D";
+            }
+            if (pawnHasInterest(pawn, MyMapper.s("cook,100")))
+            {
+                nameTag += "K";
+            }
+            if (pawnHasInterest(pawn, MyMapper.s("construct,50")))
+            {
+                nameTag += "B";
+            }
+            if (pawnHasInterest(pawn, MyMapper.s("chat with,60")))
+            {
+                nameTag += "W";
+            }
+            if (pawnHasInterest(pawn, MyMapper.s("tame,80")))
+            {
+                nameTag += "h";
+            }
+            if (pawnHasInterest(pawn, MyMapper.s("harvest,100")))
+            {
+                nameTag += "g";
+            }
+            if (pawnHasInterest(pawn, MyMapper.s("mine,100")))
+            {
+                nameTag += "m";
+            }
+            if (pawnHasInterest(pawn, MyMapper.s("smith,115")))
+            {
+                nameTag += "c";
+            }
+            if (pawnHasInterest(pawn, MyMapper.s("sculpt,100")))
+            {
+                nameTag += "a";
+            }
+            if (pawnHasInterest(pawn, MyMapper.s("research,0")))
+            {
+                nameTag += "r";
+            }
+
+            string newNick = beforeDash + nameTag;
+
+            renamePawn(pawn, newNick);
+        }
+
+        private static void renamePawn(Pawn pawn, string newNick)
+        {
+            NameTriple oldName = (NameTriple) pawn.Name;
+            pawn.Name = new NameTriple(oldName.First, newNick, oldName.Last);
+        }
+
         private static bool trySetPriority(Pawn pawn, WorkGiverDef wgd, int priority)
         {
             if (pawn != null && pawn.CapableOf(wgd))
@@ -278,6 +336,11 @@ namespace Fluffy_Tabs
             {
                 return false;
             }
+        }
+
+        private static bool pawnHasInterest(Pawn pawn, WorkGiverDef wgd)
+        {
+            return ((int)pawn.skills.MaxPassionOfRelevantSkillsFor(wgd.workType) > 0);
         }
 
     }

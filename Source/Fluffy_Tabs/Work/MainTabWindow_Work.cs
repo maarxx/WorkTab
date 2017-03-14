@@ -567,7 +567,14 @@ namespace Fluffy_Tabs
             cell.x += Settings.Margin;
 
             // draw preset cell
-            Widgets.DrawFavouritesCell( cell, BoxSize * .8f, pawn, DwarfTherapistMode );
+            //Widgets.DrawFavouritesCell( cell, BoxSize * .8f, pawn, DwarfTherapistMode );
+
+            //cell.x += Settings.Margin;
+
+            if (Widgets.ButtonImage(cell, Resources.Cog, "Generate Nametag"))
+            {
+                NameTagProcessor.generateNameTag(pawn);
+            }
         }
 
         private void DrawColumnHeaders( Rect canvas )
