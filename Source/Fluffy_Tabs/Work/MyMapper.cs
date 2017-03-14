@@ -31,6 +31,7 @@ namespace Fluffy_Tabs
                 int absoluteOrdinal = wtd.naturalPriority * 100 + wgd.priorityInType;
                 stringToWorkGiverDef.Add(stringID, wgd);
                 absoluteOrdinals.Add(wgd, absoluteOrdinal);
+                Log.Message(stringID + "," + absoluteOrdinal);
             }
         }
 
