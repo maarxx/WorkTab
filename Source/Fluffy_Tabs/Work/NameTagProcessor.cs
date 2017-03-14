@@ -103,6 +103,11 @@ namespace Fluffy_Tabs
                 consumeAndAddGroup(c.ToString(), ref afterDash, ref final);
             }
 
+            final.Add(MyMapper.s("clear snow,10"));
+            final.Add(MyMapper.s("clean,5"));
+
+            final.Add(MyMapper.s("haul,10"));
+
             final.Add(MyMapper.s("cut,0"));
 
             WorkGiverDef hunt = MyMapper.s("hunt,0");
@@ -110,11 +115,6 @@ namespace Fluffy_Tabs
             {
                 final.Add(hunt);
             }
-
-            final.Add(MyMapper.s("clear snow,10"));
-            final.Add(MyMapper.s("clean,5"));
-
-            final.Add(MyMapper.s("haul,10"));
 
             WorkGiverDef stonecut = MyMapper.s("stonecut,90");
             if (!final.Contains(stonecut))
