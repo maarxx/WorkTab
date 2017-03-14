@@ -9,6 +9,9 @@ namespace Fluffy_Tabs
 {
     public static class NameTagProcessor
     {
+
+        private static List<WorkGiverDef> spacers;
+
         private static List<WorkGiverDef> lifeLimb;
         private static List<WorkGiverDef> baseWork;
 
@@ -26,7 +29,7 @@ namespace Fluffy_Tabs
             lifeLimb.Add(MyMapper.s("release,100"));
             lifeLimb.Add(MyMapper.s("take to bed,90"));
             lifeLimb.Add(MyMapper.s("repair,80"));
-            lifeLimb.Add(MyMapper.s("haul,80"));
+            //lifeLimb.Add(MyMapper.s("haul,80"));
 
             baseWork = new List<WorkGiverDef>();
             baseWork.Add(MyMapper.s("refuel,60"));
@@ -40,21 +43,33 @@ namespace Fluffy_Tabs
             baseWork.Add(MyMapper.s("build roof,70"));
             baseWork.Add(MyMapper.s("remove roof,60"));
             baseWork.Add(MyMapper.s("work on,40"));
-            baseWork.Add(MyMapper.s("work on,9"));
+            
             baseWork.Add(MyMapper.s("mine_JTReplaceWalls,22"));
             baseWork.Add(MyMapper.s("deconstruct,20"));
             baseWork.Add(MyMapper.s("uninstall,19"));
+
+            baseWork.Add(MyMapper.s("work on,9"));
+
             baseWork.Add(MyMapper.s("unload,120"));
             baseWork.Add(MyMapper.s("load,110"));
             baseWork.Add(MyMapper.s("strip,100"));
             baseWork.Add(MyMapper.s("bury,90"));
-            baseWork.Add(MyMapper.s("haul,80"));
+            //baseWork.Add(MyMapper.s("haul,80"));
             baseWork.Add(MyMapper.s("open,70"));
             baseWork.Add(MyMapper.s("rearm,50"));
             baseWork.Add(MyMapper.s("cremate,40"));
             baseWork.Add(MyMapper.s("work at,30"));
             baseWork.Add(MyMapper.s("take beer,20"));
             baseWork.Add(MyMapper.s("fill,19"));
+
+            spacers = new List<WorkGiverDef>();
+            for (int i = 0; i < 15; i++)
+            {
+                WorkGiverDef nextSpacer = new WorkGiverDef();
+                nextSpacer.verb = "SPACER";
+                nextSpacer.priorityInType = i;
+                spacers.Add(nextSpacer);
+            }
 
         }
 
@@ -71,10 +86,19 @@ namespace Fluffy_Tabs
                 afterDash = pawnName.Substring(pawnName.LastIndexOf('-') + 1);
             }
 
+            final.Add(spacers[1]);
 
             consumeAndAddGroup("D", ref afterDash, ref final);
 
+            consumeAndAddGroup("S", ref afterDash, ref final);
+
+            final.Add(spacers[3]);
+
             AddGroup(lifeLimb, ref final);
+
+            final.Add(spacers[4]);
+
+            consumeAndAddGroup("W", ref afterDash, ref final);
 
             consumeAndAddGroup("K", ref afterDash, ref final);
 
@@ -82,26 +106,30 @@ namespace Fluffy_Tabs
 
             final.Add(MyMapper.s("haul,80"));
 
-            consumeAndAddGroup("S", ref afterDash, ref final);
-
-            consumeAndAddGroup("W", ref afterDash, ref final);
+            final.Add(spacers[5]);
 
             string afterDashConcurrencyBuffer = afterDash;
             foreach (char c in afterDashConcurrencyBuffer)
             {
-                if(char.IsUpper(c))
+                if (char.IsUpper(c))
                 {
                     consumeAndAddGroup(c.ToString(), ref afterDash, ref final);
                 }
             }
 
+            final.Add(spacers[8]);
+
             AddGroup(baseWork, ref final);
+
+            final.Add(spacers[10]);
 
             afterDashConcurrencyBuffer = afterDash;
             foreach (char c in afterDashConcurrencyBuffer)
             {
                 consumeAndAddGroup(c.ToString(), ref afterDash, ref final);
             }
+
+            final.Add(spacers[13]);
 
             final.Add(MyMapper.s("clear snow,10"));
             final.Add(MyMapper.s("clean,5"));
@@ -128,22 +156,37 @@ namespace Fluffy_Tabs
                 final.Add(refine);
             }
 
+            assignListToPawn(p, final);
+
+        }
+
+        public static void assignListToPawn(Pawn p, List<WorkGiverDef> final)
+        {
+
             int lastPriority = 1;
             int lastOrdinal = 999999999;
             foreach (WorkGiverDef wgd in final)
             {
-                int thisPriority = lastPriority;
-                int thisOrdinal = MyMapper.ordinal(wgd);
-
-                if (lastOrdinal < thisOrdinal)
+                if (wgd.verb == "SPACER")
                 {
-                    thisPriority++;
+                    lastPriority = wgd.priorityInType;
+                    lastOrdinal = 999999999;
                 }
-
-                if (trySetPriority(p, wgd, thisPriority))
+                else
                 {
-                    lastPriority = thisPriority;
-                    lastOrdinal = thisOrdinal;
+                    int thisPriority = lastPriority;
+                    int thisOrdinal = MyMapper.ordinal(wgd);
+
+                    if (lastOrdinal < thisOrdinal)
+                    {
+                        thisPriority++;
+                    }
+
+                    if (trySetPriority(p, wgd, thisPriority))
+                    {
+                        lastPriority = thisPriority;
+                        lastOrdinal = thisOrdinal;
+                    }
                 }
             }
 
@@ -154,6 +197,7 @@ namespace Fluffy_Tabs
                     trySetPriority(p, wgd, 0);
                 }
             }
+
         }
 
         private static void consumeAndAddGroup(string c, ref string afterDash, ref List<WorkGiverDef> final)
@@ -288,6 +332,7 @@ namespace Fluffy_Tabs
             {
                 nameTag += "W";
             }
+            nameTag += "+";
             if (pawnHasInterest(pawn, MyMapper.s("tame,80")))
             {
                 nameTag += "h";
