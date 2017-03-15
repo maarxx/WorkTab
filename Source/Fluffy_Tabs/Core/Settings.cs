@@ -19,7 +19,7 @@ namespace Fluffy_Tabs
         public const float WorktypeBoxSize = 24f;
         public static bool ColorCodedPassions = true;
         public static Dictionary<JobDef, string> JobIconPaths;
-        public static int MaxPriority = 16;
+        public static int MaxPriority = 20;
         public static Dictionary<WorkGiverDef, string> WorkgiverDescriptions;
         public static Dictionary<WorkGiverDef, string> WorkgiverLabels;
         public static DefMap<WorkTypeDef, Color> WorktypeColors;

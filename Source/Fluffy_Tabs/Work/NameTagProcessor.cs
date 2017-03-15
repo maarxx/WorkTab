@@ -63,7 +63,7 @@ namespace Fluffy_Tabs
             baseWork.Add(MyMapper.s("fill,19"));
 
             spacers = new List<WorkGiverDef>();
-            for (int i = 0; i < 15; i++)
+            for (int i = 0; i < 20; i++)
             {
                 WorkGiverDef nextSpacer = new WorkGiverDef();
                 nextSpacer.verb = "SPACER";
@@ -121,7 +121,7 @@ namespace Fluffy_Tabs
 
             AddGroup(baseWork, ref final);
 
-            final.Add(spacers[10]);
+            final.Add(spacers[13]);
 
             afterDashConcurrencyBuffer = afterDash;
             foreach (char c in afterDashConcurrencyBuffer)
@@ -129,7 +129,7 @@ namespace Fluffy_Tabs
                 consumeAndAddGroup(c.ToString(), ref afterDash, ref final);
             }
 
-            final.Add(spacers[13]);
+            final.Add(spacers[16]);
 
             final.Add(MyMapper.s("clear snow,10"));
             final.Add(MyMapper.s("clean,5"));
