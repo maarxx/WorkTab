@@ -5,12 +5,17 @@ namespace Fluffy_Tabs
 {
     internal static class WorkTemplateOf
     {
-
+        public static WorkTemplate CLEANHAUL;
         public static WorkTemplate FLEX;
         public static WorkTemplate CLEAR;
 
         static WorkTemplateOf()
         {
+
+            CLEANHAUL = new WorkTemplate();
+            CLEANHAUL.minimums.Add(MyMapper.s("haul,10"), 11);
+            CLEANHAUL.minimums.Add(MyMapper.s("clear snow,10"), 10);
+            CLEANHAUL.minimums.Add(MyMapper.s("clean,5"), 10);
 
             FLEX = new WorkTemplate();
 

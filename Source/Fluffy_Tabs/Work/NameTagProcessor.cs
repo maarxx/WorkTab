@@ -131,30 +131,41 @@ namespace Fluffy_Tabs
 
             final.Add(spacers[16]);
 
-            final.Add(MyMapper.s("clear snow,10"));
-            final.Add(MyMapper.s("clean,5"));
+            addIfNotContains(MyMapper.s("clear snow,10"), ref final);
+            addIfNotContains(MyMapper.s("clean,5"), ref final);
 
-            final.Add(MyMapper.s("haul,10"));
+            addIfNotContains(MyMapper.s("haul,10"), ref final);
+
+            final.Add(spacers[18]);
 
             final.Add(MyMapper.s("cut,0"));
 
+            addIfNotContains(MyMapper.s("hunt,0"), ref final);
+            /*
             WorkGiverDef hunt = MyMapper.s("hunt,0");
             if (!final.Contains(hunt))
             {
                 final.Add(hunt);
             }
+            */
 
+            addIfNotContains(MyMapper.s("stonecut,90"), ref final);
+            /*
             WorkGiverDef stonecut = MyMapper.s("stonecut,90");
             if (!final.Contains(stonecut))
             {
                 final.Add(stonecut);
             }
+            */
 
+            addIfNotContains(MyMapper.s("refine,80"), ref final);
+            /*
             WorkGiverDef refine = MyMapper.s("refine,80");
             if (!final.Contains(refine))
             {
                 final.Add(refine);
             }
+            */
 
             assignListToPawn(p, final);
 
@@ -298,6 +309,7 @@ namespace Fluffy_Tabs
                     break;
                 case 'Y':
                 case 'y':
+                    output.Add(MyMapper.s("clear snow,10"));
                     output.Add(MyMapper.s("clean,5"));
                     break;
             }
@@ -371,14 +383,16 @@ namespace Fluffy_Tabs
 
         private static bool trySetPriority(Pawn pawn, WorkGiverDef wgd, int priority)
         {
+            PawnPrioritiesTracker ppt = WorldObject_Priorities.Get?.WorkgiverTracker(pawn);
             if (pawn != null && pawn.CapableOf(wgd))
             {
-                PawnPrioritiesTracker ppt = WorldObject_Priorities.Get?.WorkgiverTracker(pawn);
+                
                 ppt.SetPriority(wgd, priority);
                 return true;
             }
             else
             {
+                ppt.SetPriority(wgd, 0);
                 return false;
             }
         }
@@ -386,6 +400,14 @@ namespace Fluffy_Tabs
         private static bool pawnHasInterest(Pawn pawn, WorkGiverDef wgd)
         {
             return ((int)pawn.skills.MaxPassionOfRelevantSkillsFor(wgd.workType) > 0);
+        }
+
+        private static void addIfNotContains(WorkGiverDef wgd, ref List<WorkGiverDef> container)
+        {
+            if (!container.Contains(wgd))
+            {
+                container.Add(wgd);
+            }
         }
 
     }
