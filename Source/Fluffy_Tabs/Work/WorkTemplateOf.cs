@@ -8,14 +8,18 @@ namespace Fluffy_Tabs
         public static WorkTemplate CLEANHAUL;
         public static WorkTemplate FLEX;
         public static WorkTemplate CLEAR;
+        public static WorkTemplate FOOD;
 
         static WorkTemplateOf()
         {
 
             CLEANHAUL = new WorkTemplate();
+
             CLEANHAUL.minimums.Add(MyMapper.s("haul,10"), 11);
             CLEANHAUL.minimums.Add(MyMapper.s("clear snow,10"), 10);
             CLEANHAUL.minimums.Add(MyMapper.s("clean,5"), 10);
+
+
 
             FLEX = new WorkTemplate();
 
@@ -48,11 +52,22 @@ namespace Fluffy_Tabs
 
 
 
+            FOOD = new WorkTemplate();
+
+            FOOD.minimums.Add(MyMapper.s("harvest,100"), 8);
+            FOOD.minimums.Add(MyMapper.s("sow,50"), 8);
+            FOOD.minimums.Add(MyMapper.s("cut,0"), 12);
+            FOOD.minimums.Add(MyMapper.s("hunt,0"), 13);
+
+
+
             CLEAR = new WorkTemplate();
             foreach (WorkGiverDef wgd in DefDatabase<WorkGiverDef>.AllDefsListForReading)
             {
                 CLEAR.baseline.Add(wgd, 0);
             }
+
+
 
         }
     }
