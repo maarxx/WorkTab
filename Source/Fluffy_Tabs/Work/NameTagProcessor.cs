@@ -141,31 +141,10 @@ namespace Fluffy_Tabs
             final.Add(MyMapper.s("cut,0"));
 
             addIfNotContains(MyMapper.s("hunt,0"), ref final);
-            /*
-            WorkGiverDef hunt = MyMapper.s("hunt,0");
-            if (!final.Contains(hunt))
-            {
-                final.Add(hunt);
-            }
-            */
-
-            addIfNotContains(MyMapper.s("stonecut,90"), ref final);
-            /*
-            WorkGiverDef stonecut = MyMapper.s("stonecut,90");
-            if (!final.Contains(stonecut))
-            {
-                final.Add(stonecut);
-            }
-            */
 
             addIfNotContains(MyMapper.s("refine,80"), ref final);
-            /*
-            WorkGiverDef refine = MyMapper.s("refine,80");
-            if (!final.Contains(refine))
-            {
-                final.Add(refine);
-            }
-            */
+
+            addIfNotContains(MyMapper.s("stonecut,90"), ref final);
 
             assignListToPawn(p, final);
 
@@ -224,7 +203,6 @@ namespace Fluffy_Tabs
         {
             foreach (WorkGiverDef wgd in group)
             {
-                //final.Add(wgd);
                 addIfNotContains(wgd, ref final);
             }
         }
@@ -237,7 +215,6 @@ namespace Fluffy_Tabs
         private static List<WorkGiverDef> workGiversForFlag(char c)
         {
             List<WorkGiverDef> output = new List<WorkGiverDef>();
-            //char c_norm = char.ToUpper(c);
             switch (c)
             {
                 case 'D':
