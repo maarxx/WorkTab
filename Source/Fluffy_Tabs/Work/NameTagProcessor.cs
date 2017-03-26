@@ -144,6 +144,8 @@ namespace Fluffy_Tabs
 
             addIfNotContains(MyMapper.s("refine,80"), ref final);
 
+            addIfNotContains(MyMapper.s("craft,100"), ref final);
+
             addIfNotContains(MyMapper.s("stonecut,90"), ref final);
 
             assignListToPawn(p, final);
@@ -266,10 +268,10 @@ namespace Fluffy_Tabs
                     output.Add(MyMapper.s("smith,115"));
                     output.Add(MyMapper.s("work,75"));
                     output.Add(MyMapper.s("produce components,50"));
-                    output.Add(MyMapper.s("craft,100"));
                     output.Add(MyMapper.s("refine chemicals,97"));
                     output.Add(MyMapper.s("produce drugs,95"));
                     output.Add(MyMapper.s("tailor,110"));
+                    output.Add(MyMapper.s("craft,100"));
                     //output.Add(MyMapper.s("stonecut,90"));
                     //output.Add(MyMapper.s("refine,80"));
                     break;
