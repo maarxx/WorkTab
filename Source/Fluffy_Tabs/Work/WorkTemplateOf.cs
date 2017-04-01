@@ -9,6 +9,7 @@ namespace Fluffy_Tabs
         public static WorkTemplate FLEX;
         public static WorkTemplate CLEANHAUL;
         public static WorkTemplate HUNT;
+        public static WorkTemplate COMPONENTS;
         public static WorkTemplate FOOD;
         public static WorkTemplate CLEAR;
 
@@ -67,6 +68,12 @@ namespace Fluffy_Tabs
             HUNT = new WorkTemplate();
 
             HUNT.minimums.Add(MyMapper.s("hunt,0"), 10);
+
+
+
+            COMPONENTS = new WorkTemplate();
+
+            COMPONENTS.baseline.Add(MyMapper.s("produce components,50"), 10);
 
 
 

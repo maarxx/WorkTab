@@ -701,8 +701,9 @@ namespace Fluffy_Tabs
 
             List<FloatMenuOption> alternates = new List<FloatMenuOption>();
             alternates.Add(new FloatMenuOption("Clean/Haul", delegate { resetToTemplate(WorkTemplateOf.CLEANHAUL); }));
-            alternates.Add(new FloatMenuOption("Hunt", delegate { resetToTemplate(WorkTemplateOf.HUNT); }));
             alternates.Add(new FloatMenuOption("Food", delegate { resetToTemplate(WorkTemplateOf.FOOD); }));
+            alternates.Add(new FloatMenuOption("Hunt", delegate { resetToTemplate(WorkTemplateOf.HUNT); }));
+            alternates.Add(new FloatMenuOption("Components", delegate { resetToTemplate(WorkTemplateOf.COMPONENTS); }));
             alternates.Add(new FloatMenuOption("Flex", delegate { resetToTemplate(WorkTemplateOf.FLEX); }));
             alternates.Add(new FloatMenuOption("Clear", delegate { resetToTemplate(WorkTemplateOf.CLEAR); }));
             if (Widgets.ButtonImage(ref curPos, Direction.Left, Resources.Clock, "Apply an Alternate Template"))
