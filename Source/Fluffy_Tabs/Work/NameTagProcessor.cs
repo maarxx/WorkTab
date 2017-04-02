@@ -144,9 +144,9 @@ namespace Fluffy_Tabs
 
             addIfNotContains(MyMapper.s("refine,80"), ref final);
 
-            addIfNotContains(MyMapper.s("craft,100"), ref final);
-
             addIfNotContains(MyMapper.s("stonecut,90"), ref final);
+
+            addIfNotContains(MyMapper.s("craft,100"), ref final);
 
             assignListToPawn(p, final);
 
