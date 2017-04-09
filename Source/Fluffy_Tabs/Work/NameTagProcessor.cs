@@ -134,6 +134,7 @@ namespace Fluffy_Tabs
             addIfNotContains(MyMapper.s("clear snow,10"), ref final);
             addIfNotContains(MyMapper.s("clean,5"), ref final);
 
+            addIfNotContains(MyMapper.s("haul,11"), ref final);
             addIfNotContains(MyMapper.s("haul,10"), ref final);
 
             final.Add(spacers[18]);
@@ -293,6 +294,7 @@ namespace Fluffy_Tabs
                     break;
                 case 'X':
                 case 'x':
+                    output.Add(MyMapper.s("haul,11"));
                     output.Add(MyMapper.s("haul,10"));
                     break;
                 case 'Y':

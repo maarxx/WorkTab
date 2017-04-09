@@ -40,6 +40,7 @@ namespace Fluffy_Tabs
             FLEX.maximums.Add(MyMapper.s("refine,80"), 15);
             FLEX.maximums.Add(MyMapper.s("research,0"), 15);
 
+            FLEX.maximums.Add(MyMapper.s("haul,11"), 15);
             FLEX.maximums.Add(MyMapper.s("haul,10"), 15);
 
             FLEX.maximums.Add(MyMapper.s("clear snow,10"), 15);
@@ -49,6 +50,7 @@ namespace Fluffy_Tabs
 
             CLEANHAUL = new WorkTemplate();
 
+            CLEANHAUL.minimums.Add(MyMapper.s("haul,11"), 11);
             CLEANHAUL.minimums.Add(MyMapper.s("haul,10"), 11);
             CLEANHAUL.minimums.Add(MyMapper.s("clear snow,10"), 10);
             CLEANHAUL.minimums.Add(MyMapper.s("clean,5"), 10);
@@ -59,6 +61,7 @@ namespace Fluffy_Tabs
 
             FOOD.minimums.Add(MyMapper.s("harvest,100"), 5);
             FOOD.minimums.Add(MyMapper.s("sow,50"), 5);
+            FOOD.minimums.Add(MyMapper.s("haul,11"), 10);
             FOOD.minimums.Add(MyMapper.s("haul,10"), 10);
             FOOD.minimums.Add(MyMapper.s("cut,0"), 11);
             FOOD.minimums.Add(MyMapper.s("hunt,0"), 12);
