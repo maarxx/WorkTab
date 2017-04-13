@@ -139,6 +139,8 @@ namespace Fluffy_Tabs
 
             final.Add(spacers[18]);
 
+            addIfNotContains(MyMapper.s("produce components,50"), ref final);
+
             final.Add(MyMapper.s("cut,0"));
 
             addIfNotContains(MyMapper.s("hunt,0"), ref final);
@@ -268,10 +270,10 @@ namespace Fluffy_Tabs
                 case 'c':
                     output.Add(MyMapper.s("smith,115"));
                     output.Add(MyMapper.s("work,75"));
+                    output.Add(MyMapper.s("tailor,110"));
                     output.Add(MyMapper.s("produce components,50"));
                     output.Add(MyMapper.s("refine chemicals,97"));
                     output.Add(MyMapper.s("produce drugs,95"));
-                    output.Add(MyMapper.s("tailor,110"));
                     output.Add(MyMapper.s("craft,100"));
                     //output.Add(MyMapper.s("stonecut,90"));
                     //output.Add(MyMapper.s("refine,80"));

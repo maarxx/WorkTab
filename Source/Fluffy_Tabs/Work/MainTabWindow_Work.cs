@@ -706,6 +706,7 @@ namespace Fluffy_Tabs
             alternates.Add(new FloatMenuOption("Components", delegate { resetToTemplate(WorkTemplateOf.COMPONENTS); }));
             alternates.Add(new FloatMenuOption("Flex", delegate { resetToTemplate(WorkTemplateOf.FLEX); }));
             alternates.Add(new FloatMenuOption("Clear", delegate { resetToTemplate(WorkTemplateOf.CLEAR); }));
+            alternates.Add(new FloatMenuOption("NoFire", delegate { resetToTemplate(WorkTemplateOf.NOFIRE); }));
             if (Widgets.ButtonImage(ref curPos, Direction.Left, Resources.Clock, "Apply an Alternate Template"))
             {
                 Find.WindowStack.Add(new FloatMenu(alternates));

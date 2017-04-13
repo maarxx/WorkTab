@@ -11,6 +11,7 @@ namespace Fluffy_Tabs
         public static WorkTemplate HUNT;
         public static WorkTemplate COMPONENTS;
         public static WorkTemplate FOOD;
+        public static WorkTemplate NOFIRE;
         public static WorkTemplate CLEAR;
 
         static WorkTemplateOf()
@@ -77,6 +78,12 @@ namespace Fluffy_Tabs
             COMPONENTS = new WorkTemplate();
 
             COMPONENTS.baseline.Add(MyMapper.s("produce components,50"), 10);
+
+
+
+            NOFIRE = new WorkTemplate();
+
+            NOFIRE.baseline.Add(MyMapper.s("extinguish,0"), 0);
 
 
 
