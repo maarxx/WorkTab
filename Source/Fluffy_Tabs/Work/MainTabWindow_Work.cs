@@ -510,7 +510,7 @@ namespace Fluffy_Tabs
             switch ( _sortMode )
             {
                 case SortMode.Name:
-                    pawns = pawns.OrderBy( p => p.Name.ToStringFull ).ToList();
+                    pawns = pawns.OrderBy( p => p.NameStringShort ).ToList();
                     break;
 
                 case SortMode.WorkType:
